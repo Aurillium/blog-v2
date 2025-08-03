@@ -4,55 +4,52 @@ permalink: /file-sigs
 redirect_from:
   - /file_sigs
 ---
-<html><head>
+<html>
+<head>
 <title>File Signatures</title>
 <meta name="keywords" content="file signatures, file headers, magic numbers">
 <meta name="author" content="Gary C. Kessler, Ph.D., CCE, CISSP">
 <meta name="description" content="Free file signature page since 2002!">
 </head>
 <body bgcolor="#ffffff" text="#000000">
+
 <h2 align="center">GCK'S FILE SIGNATURES TABLE</h2>
 <h4 align="center">
-<p id="last-modified">Page last updated: Wed 29 November 2023 01:48:10 UTC</p>
+<p id="last-modified">Page last updated: Wed 7 May 2025 14:17:30 UTC</p>
 <script language="JavaScript">
 <!-- Hide JavaScript...
-function pad2(number) { return (number < 10 ? '0' : '') + number }
+// Not sure why that works but I commented out the JS too
+// Date manually added to last modified based on originaly website
+// https://www.garykessler.net/library/file_sigs_GCK_latest.html
+/*function pad2(number) { return (number < 10 ? '0' : '') + number }
 const date = new Date(document.lastModified);
 const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-document.getElementById('last-modified').innerHTML = "Page last updated: "+days[date.getUTCDay()]+" "+date.getUTCDate()+" "+month[date.getUTCMonth()]+" "+date.getUTCFullYear()+" "+pad2(date.getUTCHours())+":"+pad2(date.getUTCMinutes())+":"+pad2(date.getUTCSeconds())+" UTC";
+document.getElementById('last-modified').innerHTML = "Page last updated: "+days[date.getUTCDay()]+" "+date.getUTCDate()+" "+month[date.getUTCMonth()]+" "+date.getUTCFullYear()+" "+pad2(date.getUTCHours())+":"+pad2(date.getUTCMinutes())+":"+pad2(date.getUTCSeconds())+" UTC";*/
 // End Hiding -->
 </script>
 </h4>
 <blockquote>
 <p>
-This table of file signatures (aka "magic numbers") is a continuing work-in-progress. I had found little information on this in a single place, with the exception of the table in <i>Forensic Computing: A Practitioner's Guide</i> by T. Sammes &amp; B. Jenkinson (Springer, 2000); that was my inspiration to start this list in 2002. See also Wikipedia's <a href="https://web.archive.org/web/20231117005052/http://en.wikipedia.org/wiki/List_of_file_signatures" target="_blank"> List of file signatures</a>. Comments, additions, and queries can be sent to Gary Kessler at <a href="https://web.archive.org/web/20231117005052/mailto:gck@garykessler.net"> gck@garykessler.net</a>.</p>
+This table of file signatures (aka "magic numbers") is a continuing work-in-progress. I had found little information on this in a single place, with the exception of the table in <i>Forensic Computing: A Practitioner's Guide</i> by T. Sammes & B. Jenkinson (Springer, 2000); that was my inspiration to start this list in 2002. See also Wikipedia's <a href="https://en.wikipedia.org/wiki/List_of_file_signatures" target="_blank"> List of file signatures</a>. Comments, additions, and queries can be sent to Gary Kessler at <a href="mailto:gck@garykessler.net"> gck@garykessler.net</a>.</p>
 <p>
-This list is not exhaustive although I add new files as I find them or someone contributes signatures. Interpret the table as a one-way function: the magic number generally indicates the file type whereas the file type does not always have the given magic number. If you want to know to what a particular file extension refers, check out some of these sites:</p>
-
-<ul>
-<li><a href="https://web.archive.org/web/20231117005052/http://file-extension.net/seeker/" target="_blank"> File Extension Seeker: Metasearch engine for file extensions</a></li>
-<li><a href="https://web.archive.org/web/20231117005052/http://filext.com/" target="_blank"> FILExt.com</a></li>
-<li><a href="https://web.archive.org/web/20231117005052/http://www.fileinfo.com/" target="_blank"> FileInfo.com</a></li>
-<li><a href="https://web.archive.org/web/20231117005052/http://www.wotsit.org/" target="_blank"> Wotsit.org</a>, The Programmer's File and Data Resource</li>
-<li><a href="https://web.archive.org/web/20231117005052/http://www.dotwhat.net/" target="_blank"> DOT.WHAT?</a></li>
-</ul>
+This list is not exhaustive although I add new files as I find them or someone contributes signatures. Interpret the table as a one-way function: the magic number generally indicates the file type whereas the file type does not always have the given magic number. If you want to know to what a particular file extension refers, check out <a href="https://file-extension.net/seeker/" target="_blank"> File Extension Seeker: Metasearch engine for file extensions</a>.</p>
 
 <p>
 Some other useful information:</p>
 <ul>
-<li><p>My <a href="/web/20231117005052/https://www.garykessler.net/software/index.html#filesigs" target="_blank"> software utility</a> page contains a custom signature file based upon this list, for use with FTK, Scalpel, Simple Carver, Simple Carver Lite, and TrID. There is also a raw CSV file and JSON file of signatures.</p></li>
-<li><p>Tim Coakley's <a href="https://web.archive.org/web/20231117005052/http://www.filesig.co.uk/" target="_blank"> Filesig.co.uk</a> site, with Filesig Manager and Simple Carver. Also, see Tim's <a href="https://web.archive.org/web/20231117005052/http://www.filesig.co.uk/sqlitedatabasecatalog/" target="_blank"> SQLite Database Catalog</a> page, "a repository of information used to identify specific SQLite databases and properties for research purposes."</p></li>
-<li><p>Marco Pontello's <a href="https://web.archive.org/web/20231117005052/http://mark0.net/soft-trid-e.html" target="_blank"> TrID - File Identifier</a> utility designed to identify file types from their binary signatures.</p></li>
-<li><p>The National Archives' <a href="https://web.archive.org/web/20231117005052/http://apps.nationalarchives.gov.uk/PRONOM/Default.aspx" target="_blank">PRONOM</a> site provides on-line information about data file formats and their supporting software products, as well as their multi-platform <a href="https://web.archive.org/web/20231117005052/http://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/" target="_blank">DROID (Digital Record Object Identification)</a> software.</p></li>
-<li><p>Additional details on graphics file formats can be found at <a href="https://web.archive.org/web/20231117005052/http://www.dcs.ed.ac.uk/home/mxr/gfx/2d-hi.html" target="_blank"> The Graphics File Formats Page</a> and the <a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/still_fdd.shtml" target="_blank"> Sustainability of Digital Formats Planning for Library of Congress Collections</a> site.</p></li>
-<li><p>Additional details on audio and video file formats can be found at the <a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/browse_list.shtml" target="_blank"> Sustainability of Digital Formats Planning for Library of Congress Collections</a> site.</p></li>
+<li><p>My <a href="../software/index.html#filesigs" target="_blank"> software utility</a> page contains a custom signature file based upon this list, for use with FTK, Scalpel, Simple Carver, Simple Carver Lite, and TrID. There is also a raw CSV file and JSON file of signatures.</p></li>
+<li><p>Tim Coakley's <a href="https://www.filesig.co.uk/" target="_blank"> Filesig.co.uk</a> site, with Filesig Manager and Simple Carver.</p></li>
+<li><p>Marco Pontello's <a href="http://mark0.net/soft-trid-e.html" target="_blank"> TrID - File Identifier</a> utility designed to identify file types from their binary signatures.</p></li>
+<li><p>The National Archives' <a href="https://apps.nationalarchives.gov.uk/PRONOM/Default.aspx" target="_blank">PRONOM</a> site provides on-line information about data file formats and their supporting software products, as well as their multi-platform <a href="https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/" target="_blank">DROID (Digital Record Object Identification)</a> software.</p></li>
+<li><p>Additional details on graphics file formats can be found at <a href="https://www.dcs.ed.ac.uk/home/mxr/gfx/2d-hi.html" target="_blank"> The Graphics File Formats Page</a> and the <a href="https://www.digitalpreservation.gov/formats/fdd/still_fdd.shtml" target="_blank"> Sustainability of Digital Formats Planning for Library of Congress Collections</a> site.</p></li>
+<li><p>Additional details on audio and video file formats can be found at the <a href="https://www.digitalpreservation.gov/formats/fdd/browse_list.shtml" target="_blank"> Sustainability of Digital Formats Planning for Library of Congress Collections</a> site.</p></li>
 </ul>
 
 <p>
-If you are using a Linux/MacOS/Unix system, you can use the <font face="Courier"><a href="https://web.archive.org/web/20231117005052/http://en.wikipedia.org/wiki/File_%28command%29" target="_blank">file</a></font> command to determine the file type based upon the file signature, per the system's <i>magic</i> file.</p>
+If you are using a Linux/MacOS/Unix system, you can use the <font face=Courier><a href="https://en.wikipedia.org/wiki/File_%28command%29" target="_blank">file</a></font> command to determine the file type based upon the file signature, per the system's <i>magic</i> file.</p>
 <p>
-And, one last and final item — if you are searching for network traffic in raw binary files (e.g., RAM or unallocated space), see <a href="netsig.html" target="_blank"> Hints About Looking for Network Packet Fragments</a>.</p>
+And, one last and final item &#151; if you are searching for network traffic in raw binary files (e.g., RAM or unallocated space), see <a href="netsig.html" target="_blank"> Hints About Looking for Network Packet Fragments</a>.</p>
 
 <hr width="50%">
 <font size="-1">
@@ -60,8 +57,8 @@ And, one last and final item — if you are searching for network traffic in raw
 </font>
 <hr>
 
-<table cellspacing="0" cellpadding="0" border="0" align="center">
-<tbody><tr>
+<table cellspacing=0 cellpadding=0 border=0 align="center">
+<tr>
 <th>Hex Signature</th>
 <th>&nbsp; &nbsp;</th>
 <th align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ASCII Signature</th></tr>
@@ -112,16 +109,6 @@ And, one last and final item — if you are searching for network traffic in raw
 </tr>
 
 <tr>
-<td><font face="courier">00 00 00</font></td>
-<td>&nbsp;</td>
-<td><font face="courier">...</font></td></tr>
-<tr>
-<td align="right" valign="top">AVIF</td>
-<td>&nbsp;</td>
-<td> Alliance for Open Media (AOMedia) Video 1 (AV1) Image File<br><br></td>
-</tr>
-
-<tr>
 <td><font face="courier">00 00 00 00 00 00 00 00<br>
 00 00 00 00 00 00 00 00</font></td>
 <td>&nbsp;</td>
@@ -169,21 +156,6 @@ And, one last and final item — if you are searching for network traffic in raw
 <td align="right" valign="top">TBI</td>
 <td>&nbsp;</td>
 <td>Windows Disk Image file<br><br></td>
-</tr>
-
-<tr>
-<td><font face="courier">00 00 00 20 66 74 79 70<br>
-68 65 69 63</font></td>
-<td>&nbsp;</td>
-<td><font face="courier">... ftyp<br>
-heic</font></td></tr>
-<tr>
-<td align="right" valign="top">HEIC</td>
-<td>&nbsp;</td>
-<td>High Efficiency Image Container (HEIC), holding one or more High Efficiency Image File (HEIF)<br>
-— aka H.265 — images, created using the High Efficiency Video Coding (HEVC) algorithm.<br>
-Developed by the Moving Pictures Experts Group (MPEG) and adopted by Apple as the standard image<br>
-file format in 2017.<br><br></td>
 </tr>
 
 <tr>
@@ -238,19 +210,19 @@ file format in 2017.<br><br></td>
 <td>&nbsp;</td>
 <td>MPEG video file<br>
 <b>Trailer:</b><br>
-<font face="courier">00 00 01 B7</font> (<font face="courier">...·</font>)<br><br></td>
+<font face="courier">00 00 01 B7</font> (<font face="courier">...&#xB7;</font>)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">00 00 01 BA</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">....º</font></td></tr>
+<td><font face="courier">....&#xBA;</font></td></tr>
 <tr>
 <td align="right" valign="top">MPG, VOB</td>
 <td>&nbsp;</td>
 <td>DVD Video Movie File (video/dvd, video/mpeg) or DVD MPEG2<br>
 <b>Trailer:</b><br>
-<font face="courier">00 00 01 B9</font> (<font face="courier">...¹</font>)<br><br></td>
+<font face="courier">00 00 01 B9</font> (<font face="courier">...&#xb9;</font>)<br><br></td>
 </tr>
 
 <tr>
@@ -283,11 +255,11 @@ file format in 2017.<br><br></td>
 <tr>
 <td><font face="courier">00 00 03 F3</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">...ó</font></td></tr>
+<td><font face="courier">...&#xF3;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Amiga <a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/Amiga_Hunk" target="_blank"> Hunk</a> executable file<br><br></td>
+<td>Amiga <a href="https://en.wikipedia.org/wiki/Amiga_Hunk" target="_blank"> Hunk</a> executable file<br><br></td>
 </tr>
 
 <tr>
@@ -328,7 +300,7 @@ file format in 2017.<br><br></td>
 <tr>
 <td><font face="courier">00 00 49 49 58 50 52</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">..IIXPR</font></td></tr>
+<td><font face="courier">..IIXPR</td></tr>
 
 <tr>
 <td><font face="courier">00 00 4D 4D 58 50 52</font></td>
@@ -337,7 +309,7 @@ file format in 2017.<br><br></td>
 <tr>
 <td align="right" valign="top">QXD</td>
 <td>&nbsp;</td>
-<td>Quark Express document (Intel &amp; Motorola, respectively)<br>
+<td>Quark Express document (Intel & Motorola, respectively)<br>
 <b>NOTE:</b> It appears that the byte following the 0x52 ("R") is<br>
 the language indicator; 0x33 ("3") seems to indicate English<br>
 and 0x61 ("a") reportedly indicates Korean.<br><br></td>
@@ -346,13 +318,13 @@ and 0x61 ("a") reportedly indicates Korean.<br><br></td>
 <tr>
 <td><font face="courier">00 00 FE FF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">..þÿ</font></td></tr>
+<td><font face="courier">..&#xFE;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>Byte-order mark for 32-bit Unicode Transformation Format/<br>
 4-octet Universal Character Set (UTF-32/UCS-4), big-endian files.<br>
-(See the <a href="https://web.archive.org/web/20231117005052/http://www.unicode.org/" target="_blank">Unicode Home Page</a>.)<br><br></td>
+(See the <a href="http://www.unicode.org" target="_blank">Unicode Home Page</a>.)<br><br></td>
 </tr>
 
 <tr>
@@ -360,7 +332,7 @@ and 0x61 ("a") reportedly indicates Korean.<br><br></td>
 00 00 FF FF FF FF</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[6 byte offset]<br>
-..ÿÿÿÿ</font></td></tr>
+..&#xFF;&#xFF;&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">HLP</td>
 <td>&nbsp;</td>
@@ -469,7 +441,7 @@ dard Jet<br>
 00 00 04 D2 00 00 10 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">...a....<br>
-...Ò....</font></td></tr>
+...&#xD2;....</font></td></tr>
 <tr>
 <td align="right" valign="top">DB</td>
 <td>&nbsp;</td>
@@ -479,7 +451,7 @@ dard Jet<br>
 <tr>
 <td><font face="courier">00 0D BB A0</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">..»&nbsp;</font></td></tr>
+<td><font face="courier">..&#xBB;&#xA0;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -490,7 +462,7 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <tr>
 <td><font face="courier">00 11 AF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">..¯</font></td></tr>
+<td><font face="courier">..&#xAF;</font></td></tr>
 <tr>
 <td align="right" valign="top">FLI</td>
 <td>&nbsp;</td>
@@ -512,7 +484,7 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <tr>
 <td><font face="courier">00 1E 84 90 00 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">..„.....</font></td></tr>
+<td><font face="courier">..&#x84;.....</font></td></tr>
 <tr>
 <td align="right" valign="top">SNM</td>
 <td>&nbsp;</td>
@@ -522,7 +494,7 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <tr>
 <td><font face="courier">00 20 AF 30</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">. ¯0</font></td></tr>
+<td><font face="courier">. &#xAF;0</font></td></tr>
 <tr>
 <td align="right" valign="top">TPL</td>
 <td>&nbsp;</td>
@@ -542,7 +514,7 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <tr>
 <td><font face="courier">00 5C 41 B1 FF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.\A±ÿ </font></td></tr>
+<td><font face="courier">.\A&#xB1;&#xFF; </font></td></tr>
 <tr>
 <td align="right" valign="top">ENC</td>
 <td>&nbsp;</td>
@@ -550,11 +522,31 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 </tr>
 
 <tr>
+<td><font face="courier">00 6D 02</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">.m.</font></td></tr>
+<tr>
+<td align="right" valign="top">NC</td>
+<td>&nbsp;</td>
+<td>mcrypt v2.2 encrypted file<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">00 6D 03</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">.m.</font></td></tr>
+<tr>
+<td align="right" valign="top">NC</td>
+<td>&nbsp;</td>
+<td>mcrypt v2.5 encrypted file<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">[512 (0x200) byte offset]<br>
 00 6E 1E F0</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-.n.ð</font></td></tr>
+.n.&#xF0;</font></td></tr>
 <tr>
 <td align="right" valign="top">PPT</td>
 <td>&nbsp;</td>
@@ -564,7 +556,7 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <tr>
 <td><font face="courier">00 BF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.¿</font></td></tr>
+<td><font face="courier">.&#xBF;</font></td></tr>
 <tr>
 <td align="right" valign="top">SOL</td>
 <td>&nbsp;</td>
@@ -575,8 +567,8 @@ appear to be the number of e-mails in the associated <i>mbox</i> file.)<br><br><
 <td><font face="courier">00 FF FF FF FF FF FF FF<br>
 FF FF FF 00 00 02 00 01</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.ÿÿÿÿÿÿÿ<br>
-ÿÿÿ.....</font></td></tr>
+<td><font face="courier">.&#xFF;&#xFF;&#xFF;&#xFF;&#xFF;&#xFF;&#xFF;<br>
+&#xFF;&#xFF;&#xFF;.....</font></td></tr>
 <tr>
 <td align="right" valign="top">MDF</td>
 <td>&nbsp;</td>
@@ -591,7 +583,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <td align="right" valign="top">EMF</td>
 <td>&nbsp;</td>
 <td>Extended (Enhanced) Windows Metafile Format, printer spool file<br>
-(0x18-17 &amp; 0xC4-36 is Win2K/NT; 0x5C0-1 is WinXP)<br><br></td>
+(0x18-17 & 0xC4-36 is Win2K/NT; 0x5C0-1 is WinXP)<br><br></td>
 </tr>
 
 <tr>
@@ -633,7 +625,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <td align="right" valign="top">FDB, GDB</td>
 <td>&nbsp;</td>
 <td>Firebird and Interbase database files, respectively. See<br>
-<a href="https://web.archive.org/web/20231117005052/http://www.ibphoenix.com/resources/documents/design/doc_24" target="_blank"> IBPhoenix</a> for more information.<br><br></td>
+<a href="http://www.ibphoenix.com/resources/documents/design/doc_24" target="_blank"> IBPhoenix</a> for more information.<br><br></td>
 </tr>
 
 <tr>
@@ -645,7 +637,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <tr>
 <td align="right" valign="top">TBI</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.ritlabs.com/en/products/thebat/" target="_blank">The Bat!</a> secure e-mail Message Base Index file<br><br></td>
+<td><a href="https://www.ritlabs.com/en/products/thebat/" target="_blank">The Bat!</a> secure e-mail Message Base Index file<br><br></td>
 </tr>
 
 <tr>
@@ -669,9 +661,19 @@ FF FF FF 00 00 02 00 01</font></td>
 </tr>
 
 <tr>
+<td><font face="courier">01 C0 0C</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">.&#xC0;.</font></td></tr>
+<tr>
+<td align="right" valign="top">HED</td>
+<td>&nbsp;</td>
+<td> HighEdit document<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">01 DA 01 01 00 03</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.Ú....</font></td></tr>
+<td><font face="courier">.&#xDA;....</font></td></tr>
 <tr>
 <td align="right" valign="top">RGB</td>
 <td>&nbsp;</td>
@@ -681,7 +683,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <tr>
 <td><font face="courier">01 FF 02 04 03 02</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.ÿ....</font></td></tr>
+<td><font face="courier">.&#xFF;....</font></td></tr>
 <tr>
 <td align="right" valign="top">DRW</td>
 <td>&nbsp;</td>
@@ -695,7 +697,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <tr>
 <td align="right" valign="top">DSS</td>
 <td>&nbsp;</td>
-<td>Digital Speech Standard (Olympus, Grundig, &amp; Phillips), v2<br><br></td>
+<td>Digital Speech Standard (Olympus, Grundig, & Phillips), v2<br><br></td>
 </tr>
 
 <tr>
@@ -706,7 +708,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <td align="right" valign="top">DAT</td>
 <td>&nbsp;</td>
 <td>MapInfo Native Data Format</td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">DB3</td>
 <td>&nbsp;</td>
 <td>dBASE III file<br><br></td>
@@ -720,7 +722,7 @@ FF FF FF 00 00 02 00 01</font></td>
 <td align="right" valign="top">NFC</td>
 <td>&nbsp;</td>
 <td>Nokia PC Suite Content Copier file<br></td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">QPH</td>
 <td>&nbsp;</td>
 <td>Quicken price history file<br><br></td>
@@ -771,7 +773,7 @@ xx xx xx xx 20 03 00 00</font></td>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://downloads.sourceforge.net/project/odessa/ODESSA/White%20Papers/Recycler_Bin_Record_Reconstruction.pdf" target="_blank">INFO2 Windows recycle bin</a> file. NOTE: Bytes 12-13<br>
+<td><a href="http://downloads.sourceforge.net/project/odessa/ODESSA/White%20Papers/Recycler_Bin_Record_Reconstruction.pdf" target="_blank">INFO2 Windows recycle bin</a> file. NOTE: Bytes 12-13<br>
 indicate the size of each INFO2 record; the most common<br>
 value is 0x20-03 (0x0320 = 800 bytes).<br><br></td>
 </tr>
@@ -780,8 +782,8 @@ value is 0x20-03 (0x0320 = 800 bytes).<br><br></td>
 <td><font face="courier">06 06 ED F5 D8 1D 46 E5<br>
 BD 31 EF E7 FE 74 B7 1D</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">..íõØ.Få<br>
-½1ïçþt·.</font></td></tr>
+<td><font face="courier">..&#xED;&#xF5;&#xD8;.F&#xE5;<br>
+&#xBD;1&#xEF;&#xE7;&#xFE;t&#xB7;.</font></td></tr>
 <tr>
 <td align="right" valign="top">INDD</td>
 <td>&nbsp;</td>
@@ -797,7 +799,7 @@ BD 31 EF E7 FE 74 B7 1D</font></td>
 <tr>
 <td align="right" valign="top">MXF</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.loc.gov/preservation/digital/formats/fdd/fdd000013.shtml" target="_blank">Material Exchange Format</a> file<br><br></td>
+<td><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000013.shtml" target="_blank">Material Exchange Format</a> file<br><br></td>
 </tr>
 
 <tr>
@@ -872,7 +874,7 @@ an IPv4 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <tr>
 <td align="right" valign="top">PCX</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.fileformat.info/format/pcx/egff.htm" target="_blank"> ZSOFT Paintbrush file</a><br>
+<td><a href="https://www.fileformat.info/format/pcx/egff.htm" target="_blank"> ZSOFT Paintbrush file</a><br>
 (where Version (<i>nn</i>) = 0x00, 0x02, 0x03, 0x04, or 0x05)<br><br></td>
 </tr>
 
@@ -891,7 +893,7 @@ tcoin.pr</font></td></tr>
 <tr>
 <td><font face="courier">0C ED</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.í</font></td></tr>
+<td><font face="courier">.&#xED;</font></td></tr>
 <tr>
 <td align="right" valign="top">MP</td>
 <td>&nbsp;</td>
@@ -933,7 +935,7 @@ tcoin.pr</font></td></tr>
 0F 00 E8 03</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-..è.</font></td></tr>
+..&#xE8;.</font></td></tr>
 <tr>
 <td align="right" valign="top">PPT</td>
 <td>&nbsp;</td>
@@ -1017,12 +1019,12 @@ for types 1-5, respectively)<br><br></td>
 <tr>
 <td><font face="courier">1A 45 DF A3</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.Eß£</font></td></tr>
+<td><font face="courier">.E&#xDF;&#xA3;</font></td></tr>
 <tr>
 <td align="right" valign="top">MKV</td>
 <td>&nbsp;</td>
 <td>Matroska stream file</td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">WEBM</td>
 <td>&nbsp;</td>
 <td>WebM video file<br><br></td>
@@ -1057,7 +1059,7 @@ IMAGE V1<br>
 <tr>
 <td><font face="courier">1F 8B 08</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.‹.</font></td></tr>
+<td><font face="courier">.&#x8B;.</font></td></tr>
 <tr>
 <td align="right" valign="top">GZ, TGZ</td>
 <td>&nbsp;</td>
@@ -1072,7 +1074,7 @@ IMAGE V1<br>
 <tr>
 <td><font face="courier">1F 8B 08 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.‹..</font></td></tr>
+<td><font face="courier">.&#x8B;..</font></td></tr>
 <tr>
 <td align="right" valign="top">DSS</td>
 <td>&nbsp;</td>
@@ -1092,7 +1094,7 @@ IMAGE V1<br>
 <tr>
 <td><font face="courier">1F A0</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.&nbsp;</font></td></tr>
+<td><font face="courier">.&#xA0;</font></td></tr>
 <tr>
 <td align="right" valign="top">TAR.Z</td>
 <td>&nbsp;</td>
@@ -1134,8 +1136,8 @@ A/NOS...</font></td></tr>
 <tr>
 <td align="right" valign="top">BSB</td>
 <td>&nbsp;</td>
-<td>NOAA Raster Navigation Chart (RNC®) file (<a href="https://web.archive.org/web/20231117005052/https://charts.noaa.gov/RNCs/RNCs.shtml" target="x">https://charts.noaa.gov/RNCs/RNCs.shtml</a>).<br>
-See also the <a href="https://web.archive.org/web/20231117005052/https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:chart_conversion_manual:bsb_kap_file_format&amp;do=export_pdf" target="x"> BSB/KAP File Format</a> specification<br><br></td>
+<td>NOAA Raster Navigation Chart (RNC&reg;) file (<a href="https://charts.noaa.gov/RNCs/RNCs.shtml" target="x">https://charts.noaa.gov/RNCs/RNCs.shtml</a>).<br>
+See also the <a href="https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:chart_conversion_manual:bsb_kap_file_format&do=export_pdf" target="x"> BSB/KAP File Format</a> specification<br><br></td>
 </tr>
 
 <tr>
@@ -1166,7 +1168,7 @@ Common Object File Format (COFF)<br><br></td>
 <tr>
 <td align="right" valign="top">&nbsp;</td>
 <td>&nbsp;</td>
-<td>Microsoft Outlook <a href="https://web.archive.org/web/20231117005052/https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-pst/141923d5-15ab-4ef1-a524-6dce75aae546" target="_blank"> Personal Folder Files (PFF)</a>:<br></td>
+<td>Microsoft Outlook <a href="https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-pst/141923d5-15ab-4ef1-a524-6dce75aae546" target="_blank"> Personal Folder Files (PFF)</a>:<br></td>
 </tr>
 <tr>
 <td align="right" valign="top">OST</td>
@@ -1181,7 +1183,7 @@ Common Object File Format (COFF)<br><br></td>
 <tr>
 <td align="right" valign="top">PST</td>
 <td>&nbsp;</td>
-<td>Microsoft Outlook <a href="https://web.archive.org/web/20231117005052/https://www.file-recovery.com/pst-signature-format.htm" target="_blank"> Personal Folder File</a><br><br></td>
+<td>Microsoft Outlook <a href="https://www.file-recovery.com/pst-signature-format.htm" target="_blank"> Personal Folder File</a><br><br></td>
 </tr>
 
 <tr>
@@ -1243,7 +1245,7 @@ s an Key</font></td></tr>
 <td align="right" valign="top">AMR</td>
 <td>&nbsp;</td>
 <td>Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction)<br>
-Codec, commonly audio format with GSM cell phones. (See <a href="https://web.archive.org/web/20231117005052/http://www.rfc-editor.org/rfc/rfc4867.txt" target="_blank">RFC 4867</a>.)<br><br></td>
+Codec, commonly audio format with GSM cell phones. (See <a href="http://www.rfc-editor.org/rfc/rfc4867.txt" target="_blank">RFC 4867</a>.)<br><br></td>
 </tr>
 
 <tr>
@@ -1253,7 +1255,7 @@ Codec, commonly audio format with GSM cell phones. (See <a href="https://web.arc
 <tr>
 <td align="right" valign="top">SIL</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://tools.ietf.org/html/draft-spittka-silk-payload-format-00" target="_blank"> Audio compression format</a> developed by Skype; also used by other applications.<br><br></td>
+<td><a href="http://tools.ietf.org/html/draft-spittka-silk-payload-format-00" target="_blank"> Audio compression format</a> developed by Skype; also used by other applications.<br><br></td>
 </tr>
 
 <tr>
@@ -1321,7 +1323,7 @@ TA FILE</font></td></tr>
 <tr>
 <td align="right" valign="top">SAV</td>
 <td>&nbsp;</td>
-<td>SPSS Statistics (née Statistical Package for the Social Sciences, then<br>
+<td>SPSS Statistics (n&eacute;e Statistical Package for the Social Sciences, then<br>
 Statistical Product and Service Solutions) data file<br><br></td>
 </tr>
  
@@ -1434,7 +1436,7 @@ d </font></td></tr>
 <td><font face="courier">2E 52 45 43</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">.REC</font>
-</td></tr><tr>
+<tr>
 <td align="right" valign="top">IVR</td>
 <td>&nbsp;</td>
 <td>RealPlayer video file (V11 and later)<br><br></td>
@@ -1444,7 +1446,7 @@ d </font></td></tr>
 <td><font face="courier">2E 52 4D 46</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">.RMF</font>
-</td></tr><tr>
+<tr>
 <td align="right" valign="top">RM, RMVB</td>
 <td>&nbsp;</td>
 <td>RealMedia streaming media file<br><br></td>
@@ -1456,7 +1458,7 @@ d </font></td></tr>
 <td>&nbsp;</td>
 <td><font face="courier">.RMF....<br>
 .</font>
-</td></tr><tr>
+<tr>
 <td align="right" valign="top">RA</td>
 <td>&nbsp;</td>
 <td>RealAudio file<br><br></td>
@@ -1465,7 +1467,7 @@ d </font></td></tr>
 <tr>
 <td><font face="courier">2E 72 61 FD 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.raý.</font></td></tr>
+<td><font face="courier">.ra&#xFD;.</font></td></tr>
 <tr>
 <td align="right" valign="top">RA</td>
 <td>&nbsp;</td>
@@ -1479,7 +1481,7 @@ d </font></td></tr>
 <tr>
 <td align="right" valign="top">AU</td>
 <td>&nbsp;</td>
-<td>NeXT/Sun Microsystems µ-Law audio file<br><br></td>
+<td>NeXT/Sun Microsystems &#xB5;-Law audio file<br><br></td>
 </tr>
 
 <tr>
@@ -1524,20 +1526,20 @@ k:z</font></td></tr>
 <tr>
 <td align="right" valign="top">GED</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.thoughtco.com/genealogy-gedcom-basics-1421891" target="_blank">GEnealogical Data COMmunication (GEDCOM)</a> file<br><br></td>
+<td><a href="https://www.thoughtco.com/genealogy-gedcom-basics-1421891" target="_blank">GEnealogical Data COMmunication (GEDCOM)</a> file<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">30 26 B2 75 8E 66 CF 11<br>
 A6 D9 00 AA 00 62 CE 6C</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">0&amp;²u.fÏ.<br>
-¦Ù.ª.bÎl</font></td></tr>
+<td><font face="courier">0&&#xB2;u.f&#xCF;.<br>
+&#xA6;&#xD9;.&#xAA;.b&#xCE;l</font></td></tr>
 <tr>
 <td align="right" valign="top">ASF, WMA, WMV</td>
 <td>&nbsp;</td>
 <td>Microsoft Windows Media Audio/Video File<br>
-(<a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/fdd000067.shtml" target="_blank">Advanced Systems Format</a>)<br><br></td>
+(<a href="http://www.digitalpreservation.gov/formats/fdd/fdd000067.shtml" target="_blank">Advanced Systems Format</a>)<br><br></td>
 </tr>
 
 <tr>
@@ -1564,18 +1566,18 @@ Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td></tr>
 <td>Archive created with the cpio utility (where <i>nn</i><br>
 values 0x37 ("7"), 0x31 ("1"), and 0x32 ("2") refer to the<br>
 standard ASCII format, new ASCII (aka SVR4) format, and CRC<br>
-format, respectively. (The <a href="https://web.archive.org/web/20231117005052/http://www.gnu.org/software/swbis/swpackage_8.html" target="new"> swpackage(8)</a> page has additional<br>
+format, respectively. (The <a href="http://www.gnu.org/software/swbis/swpackage_8.html" target="new"> swpackage(8)</a> page has additional<br>
 information.) (Thanks to F. Webber for this....)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">31 BE</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">1¾</font></td></tr>
+<td><font face="courier">1&#xBE;</font></td></tr>
 <tr>
 <td><font face="courier">32 BE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">2¾</font></td></tr>
+<td><font face="courier">2&#xBE;</font></td></tr>
 <tr>
 <td align="right" valign="top">WRI</td>
 <td>&nbsp;</td>
@@ -1587,7 +1589,7 @@ information.) (Thanks to F. Webber for this....)<br><br></td>
 00 00 80 00 00 00 FF 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">2.......<br>
-......ÿ.</font></td></tr>
+......&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">PCS</td>
 <td>&nbsp;</td>
@@ -1597,7 +1599,7 @@ information.) (Thanks to F. Webber for this....)<br><br></td>
 <tr>
 <td><font face="courier">34 CD B2 A1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">4Í²¡</font></td></tr>
+<td><font face="courier">4&#xCD;&#xB2;&#xA1;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -1607,7 +1609,7 @@ information.) (Thanks to F. Webber for this....)<br><br></td>
 <tr>
 <td><font face="courier">37 7A BC AF 27 1C</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">7z¼¯'.</font></td></tr>
+<td><font face="courier">7z&#xBC;&#xAF;'.</font></td></tr>
 <tr>
 <td align="right" valign="top">7Z</td>
 <td>&nbsp;</td>
@@ -1617,12 +1619,12 @@ information.) (Thanks to F. Webber for this....)<br><br></td>
 <tr>
 <td><font face="courier">37 E4 53 96 C9 DB D6 07</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">7äS–ÛÖ.</font></td></tr>
+<td><font face="courier">7&#xE4;S&#x96;&#xDB;&#xD6;.</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>zisofs compression format, recognized by some Linux kernels. See the<br>
-<a href="https://web.archive.org/web/20231117005052/https://formats.kaitai.io/zisofs/" target="new"> zisofs: format specification</a> page.<br><br></td>
+<a href="https://formats.kaitai.io/zisofs/" target="new"> zisofs: format specification</a> page.<br><br></td>
 </tr>
 
 <tr>
@@ -1758,6 +1760,18 @@ ynthesiz</font></td></tr>
 </tr>
 
 <tr>
+<td><font face="courier">3C 48 50 53 20 76 65 72<br>
+73 69 6F 6E 3D 22</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">&lt;HPS ver<br>
+sion="</font></td></tr>
+<tr>
+<td align="right" valign="top">DCM</td>
+<td>&nbsp;</td>
+<td>DCM 3D model (generic) file<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">3C 4B 65 79 68 6F 6C 65 3E</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">&lt;Keyhole&gt;</font></td></tr>
@@ -1790,10 +1804,9 @@ sion="1.<br>
 <tr>
 <td align="right" valign="top">GPX</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.topografix.com/GPX/1/1/" target="_blank">GPS eXchange file (v1.1 schema)</a><br><br></td>
+<td><a href="http://www.topografix.com/GPX/1/1/" target="_blank">GPS eXchange file (v1.1 schema)</a><br><br></td>
 </tr>
 
-<!-- ** NEW -->
 <tr>
 <td><font face="courier">[58 byte offset]<br>
 3C 6B 39 73 65 74 74 69<br>
@@ -1805,7 +1818,7 @@ ngs</font></td></tr>
 <tr>
 <td align="right" valign="top">K9S</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://k9mail.app/" target="x">K-9 Mail</a> settings file (Android e-mail app)<br><br></td>
+<td><a href="https://k9mail.app/" target="x">K-9 Mail</a> settings file (Android e-mail app)<br><br></td>
 </tr>
 
 <tr>
@@ -1817,7 +1830,7 @@ gSqh;</font></td></tr>
 <tr>
 <td align="right" valign="top">B85</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://en.wikipedia.org/wiki/Ascii85" target="_blank">ASCII85</a> (aka BASE85) encoded file, sometimes used with PostScript and PDF.<br>
+<td><a href="http://en.wikipedia.org/wiki/Ascii85" target="_blank">ASCII85</a> (aka BASE85) encoded file, sometimes used with PostScript and PDF.<br>
 <b>Trailer:</b> <font face="courier">7E 3E 0A</font> (<font face="courier">~&gt;.</font>)<br><br></td>
 </tr>
 
@@ -1826,7 +1839,7 @@ gSqh;</font></td></tr>
 3E 00 03 00 FE FF 09 00<br>06</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[24 (0x18) byte offset]<br>
-&gt;...þÿ..<br>
+&gt;...&#xFE;&#xFF;..<br>
 .</font></td></tr>
 <tr>
 <td align="right" valign="top">WB3</td>
@@ -1870,7 +1883,7 @@ gSqh;</font></td></tr>
 <tr>
 <td align="right" valign="top">ABOX2</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://sites.google.com/site/analogbox2/home" target="_blank">Analog Box</a> circuit files<br><br></td>
+<td><a href="https://sites.google.com/site/analogbox2/home" target="_blank">Analog Box</a> circuit files<br><br></td>
 </tr>
 
 <tr>
@@ -1880,33 +1893,33 @@ gSqh;</font></td></tr>
 <tr>
 <td align="right" valign="top">DWG</td>
 <td>&nbsp;</td>
-<td>Generic <a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/AutoCAD" target="_blank">AutoCAD</a> drawing file<br><br></td>
+<td>Generic <a href="https://en.wikipedia.org/wiki/AutoCAD" target="_blank">AutoCAD</a> drawing file<br><br></td>
 </tr>
 <tr>
-<td colspan="5">
+<td colspan=5>
 <blockquote>
 <b>NOTES on AutoCAD file headers:</b> The 0x41-43 (AC) is a generic header, occupying the first<br>
-two bytes in the file. The next <a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/.dwg" target="_blank">three or four bytes</a> give further indication about the version<br>
-(see also <a href="https://web.archive.org/web/20231117005052/https://www.opendesign.com/files/guestdownloads/OpenDesign_Specification_for_.dwg_files.pdf" target="_blank"> <i>DWG file specifications released by OpenDesign</i></a>):<p></p>
+two bytes in the file. The next <a href="https://en.wikipedia.org/wiki/.dwg" target="_blank">three or four bytes</a> give further indication about the version<br>
+(see also <a href="https://www.opendesign.com/files/guestdownloads/OpenDesign_Specification_for_.dwg_files.pdf" target="_blank"> <i>DWG file specifications released by OpenDesign</i></a>):</p>
 <ul>
-<li>0x31-2E-32 (1.2) — AutoCAD v1.2 (Release 2)</li>
-<li>0x31-2E-33 (1.3) — AutoCAD v1.3 (Release 3)</li>
-<li>0x31-2E-34-30 (1.40) — AutoCAD v1.40 (Release 4)</li>
-<li>0x31-2E-35-30 (1.50) — AutoCAD v2.05 (Release 5)</li>
-<li>0x32-2E-31-30 (2.10) — AutoCAD v2.10 (Release 6)</li>
-<li>0x31-30-30-32 (1002) — AutoCAD v2.5 (Release 7)</li>
-<li>0x31-30-30-33 (1003) — AutoCAD v2.6 (Release 8)</li>
-<li>0x31-30-30-34 (1004) — AutoCAD v9.0 (Release 9)</li>
-<li>0x31-30-30-36 (1006) — AutoCAD v10.0 (Release 10)</li>
-<li>0x31-30-30-39 (1009) — AutoCAD v11.0 (Release 11)/v12.0 (Release 12)</li>
-<li>0x31-30-31-32 (1012) — AutoCAD v13.0 (Release 13)</li>
-<li>0x31-30-31-34 (1014) — AutoCAD v14.0 (Release 14)</li>
-<li>0x31-30-31-35 (1015) — AutoCAD 2000 (v15.0)/2000i (v15.1)/2002 (v15.2) -- (Releases 15-17)</li>
-<li>0x31-30-31-38 (1018) — AutoCAD 2004 (v16.0)/2005 (v16.1)/2006 (v16.2) -- (Releases 18-20)</li>
-<li>0x31-30-32-31 (1021) — AutoCAD 2007 (v17.0)/2008 (v17.1)/2009 (v17.2) -- (Releases 21-23)</li>
-<li>0x31-30-32-34 (1024) — AutoCAD 2010 (v18.0)/2011 (v18.1)/2012 (v18.2) -- (Releases 24-26)</li>
-<li>0x31-30-32-37 (1027) — AutoCAD 2013 (v19.0)/2014 (v19.1)/2015 (v20.0)/2016 (v20.1)/2017 (v20.2) -- (Releases 27-31)</li>
-<li>0x31-30-33-32 (1032) — AutoCAD 2018 (v22.0) (Release 32)</li>
+<li>0x31-2E-32 (1.2) &#151; AutoCAD v1.2 (Release 2)</li>
+<li>0x31-2E-33 (1.3) &#151; AutoCAD v1.3 (Release 3)</li>
+<li>0x31-2E-34-30 (1.40) &#151; AutoCAD v1.40 (Release 4)</li>
+<li>0x31-2E-35-30 (1.50) &#151; AutoCAD v2.05 (Release 5)</li>
+<li>0x32-2E-31-30 (2.10) &#151; AutoCAD v2.10 (Release 6)</li>
+<li>0x31-30-30-32 (1002) &#151; AutoCAD v2.5 (Release 7)</li>
+<li>0x31-30-30-33 (1003) &#151; AutoCAD v2.6 (Release 8)</li>
+<li>0x31-30-30-34 (1004) &#151; AutoCAD v9.0 (Release 9)</li>
+<li>0x31-30-30-36 (1006) &#151; AutoCAD v10.0 (Release 10)</li>
+<li>0x31-30-30-39 (1009) &#151; AutoCAD v11.0 (Release 11)/v12.0 (Release 12)</li>
+<li>0x31-30-31-32 (1012) &#151; AutoCAD v13.0 (Release 13)</li>
+<li>0x31-30-31-34 (1014) &#151; AutoCAD v14.0 (Release 14)</li>
+<li>0x31-30-31-35 (1015) &#151; AutoCAD 2000 (v15.0)/2000i (v15.1)/2002 (v15.2) -- (Releases 15-17)</li>
+<li>0x31-30-31-38 (1018) &#151; AutoCAD 2004 (v16.0)/2005 (v16.1)/2006 (v16.2) -- (Releases 18-20)</li>
+<li>0x31-30-32-31 (1021) &#151; AutoCAD 2007 (v17.0)/2008 (v17.1)/2009 (v17.2) -- (Releases 21-23)</li>
+<li>0x31-30-32-34 (1024) &#151; AutoCAD 2010 (v18.0)/2011 (v18.1)/2012 (v18.2) -- (Releases 24-26)</li>
+<li>0x31-30-32-37 (1027) &#151; AutoCAD 2013 (v19.0)/2014 (v19.1)/2015 (v20.0)/2016 (v20.1)/2017 (v20.2) -- (Releases 27-31)</li>
+<li>0x31-30-33-32 (1032) &#151; AutoCAD 2018 (v22.0) (Release 32)</li>
 </ul>
 </blockquote>
 </td></tr>
@@ -1938,7 +1951,7 @@ two bytes in the file. The next <a href="https://web.archive.org/web/20231117005
 <tr>
 <td align="right" valign="top">AES</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.aescrypt.com/aes_file_format.html" target="_blank">AES Crypt</a> file format. (The fourth byte is the version number, 0-2.)<br><br></td>
+<td><a href="https://www.aescrypt.com/aes_file_format.html" target="_blank">AES Crypt</a> file format. (The fourth byte is the version number, 0-2.)<br><br></td>
 </tr>
 
 <tr>
@@ -2002,7 +2015,7 @@ data (MAIN.IDX)<br><br></td>
 <td align="right" valign="top">ORG, PFC</td>
 <td>&nbsp;</td>
 <td>AOL personal file cabinet (PFC) file<br>
-<b>NOTE:</b> See <a href="https://web.archive.org/web/20231117005052/http://web.archive.org/web/20050420101922/http://members.aol.com/fvongordon/pfc/PFC-Details.zip" target="_blank"> PFC-Details.zip</a> for PFC file format information.<br><br></td>
+<b>NOTE:</b> See <a href="http://web.archive.org/web/20050420101922/http://members.aol.com/fvongordon/pfc/PFC-Details.zip" target="_blank"> PFC-Details.zip</a> for PFC file format information.<br><br></td>
 </tr>
 
 <tr>
@@ -2071,15 +2084,15 @@ ARD..</font></td></tr>
 <td>Thomson Speedtouch series WLAN router firmware<br><br></td>
 </tr>
 <tr>
-<td colspan="5">
+<td colspan=5>
 <blockquote>
 <b>NOTES on BLI/RBI file headers:</b> The signature above is correct for the generic first six bytes.<br>
-Reportedly, the 7th &amp; 8th bytes vary by version, and the 9th byte is always 0x30.<p></p>
+Reportedly, the 7th & 8th bytes vary by version, and the 9th byte is always 0x30.</p>
 <ul>
-<li>v6.0.7.1 (.bli) — 0x42-4C-49-32-32-33-51-4B-30 (BLI223QK0)</li>
-<li>v7.4.1.7 (.bli) — 0x42-4C-49-32-32-33-51-48-30 (BLI223QH0)</li>
-<li>v8.2.2.5 (.bli) — 0x42-4C-49-32-32-33-55-46-30 (BLI223UF0)</li>
-<li>v8.4.3 (.bli/.rbi) — 0x42-4C-49-32-32-33-57-31-30 (BLI223W10)</li>
+<li>v6.0.7.1 (.bli) &#151; 0x42-4C-49-32-32-33-51-4B-30 (BLI223QK0)</li>
+<li>v7.4.1.7 (.bli) &#151; 0x42-4C-49-32-32-33-51-48-30 (BLI223QH0)</li>
+<li>v8.2.2.5 (.bli) &#151; 0x42-4C-49-32-32-33-55-46-30 (BLI223UF0)</li>
+<li>v8.4.3 (.bli/.rbi) &#151; 0x42-4C-49-32-32-33-57-31-30 (BLI223W10)</li>
 </ul>
 </blockquote>
 </td></tr>
@@ -2112,7 +2125,7 @@ Reportedly, the 7th &amp; 8th bytes vary by version, and the 9th byte is always 
 <tr>
 <td align="right" valign="top">BPG</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://bellard.org/bpg/" target="_blank"> Better Portable Graphics</a> image format<br><br></td>
+<td><a href="http://bellard.org/bpg/" target="_blank"> Better Portable Graphics</a> image format<br><br></td>
 </tr>
 
 <tr>
@@ -2122,7 +2135,7 @@ Reportedly, the 7th &amp; 8th bytes vary by version, and the 9th byte is always 
 <tr>
 <td align="right" valign="top">BZ2, TAR.BZ2, TBZ2, TB2</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://en.wikipedia.org/wiki/Bzip" target="_blank">bzip2</a> compressed archive</td></tr>
+<td><a href="http://en.wikipedia.org/wiki/Bzip" target="_blank">bzip2</a> compressed archive</td></tr>
 <tr>
 <td align="right" valign="top">DMG</td>
 <td>&nbsp;</td>
@@ -2139,7 +2152,7 @@ a..</font></td></tr>
 <tr>
 <td align="right" valign="top">APUF</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.briggsoft.com/puffer.htm" target="_blank">Puffer</a> ASCII-armored encrypted archive<br><br></td>
+<td><a href="http://www.briggsoft.com/puffer.htm" target="_blank">Puffer</a> ASCII-armored encrypted archive<br><br></td>
 </tr>
 
 <tr>
@@ -2158,7 +2171,7 @@ a..</font></td></tr>
 <td><font face="courier">43 23 2B 44 A4 43 4D A5<br>
 48 64 72</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">C#+D¤CM¥<br>
+<td><font face="courier">C#+D&#xA4;CM&#xA5;<br>
 Hdr</font></td></tr>
 <tr>
 <td align="right" valign="top">RTD</td>
@@ -2173,7 +2186,7 @@ Hdr</font></td></tr>
 <tr>
 <td align="right" valign="top">IFF</td>
 <td>&nbsp;</td>
-<td>Electronic Arts' <a href="https://web.archive.org/web/20231117005052/https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
+<td>Electronic Arts' <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
 </tr>
 
 <tr>
@@ -2196,7 +2209,37 @@ Hdr</font></td></tr>
 <td>ISO-9660 CD Disc Image<br>
 This signature usually occurs at byte offset 32769 (0x8001),<br>
 34817 (0x8801), or 36865 (0x9001).<br>
-More information can be found at <a href="https://web.archive.org/web/20231117005052/http://www.mactech.com/articles/develop/issue_03/high_sierra.html" target+"_blank"="">MacTech</a> or at <a href="https://web.archive.org/web/20231117005052/http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-119.pdf" target="_blank"> ECMA</a>.<br><br></td>
+More information can be found at <a href="http://www.mactech.com/articles/develop/issue_03/high_sierra.html" target+"_blank">MacTech</a> or at <a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-119.pdf" target="_blank"> ECMA</a>.<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">43 44 46</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">CDF</font></td></tr>
+<tr>
+<td align="right" valign="top">NC</td>
+<td>&nbsp;</td>
+<td><a href="https://www.unidata.ucar.edu/software/netcdf/examples/files.html" target="x">NetCDF (Network Common Data Form) </a>generic files<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">43 44 46 01</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">CDF.</font></td></tr>
+<tr>
+<td align="right" valign="top">NC</td>
+<td>&nbsp;</td>
+<td><a href="https://www.unidata.ucar.edu/software/netcdf/examples/files.html" target="x">NetCDF (Network Common Data Form) </a>, v3<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">43 44 46 02</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">CDF.</font></td></tr>
+<tr>
+<td align="right" valign="top">NC</td>
+<td>&nbsp;</td>
+<td><a href="https://www.unidata.ucar.edu/software/netcdf/examples/files.html" target="x">NetCDF (Network Common Data Form) </a>, v3 64-bit<br><br></td>
 </tr>
 
 <tr>
@@ -2298,7 +2341,7 @@ More information can be found at <a href="https://web.archive.org/web/2023111700
 <td align="right" valign="top">SWF</td>
 <td>&nbsp;</td>
 <td>Macromedia Shockwave Flash player file (zlib compressed, SWF 6 and later).<br>
-See <a href="https://web.archive.org/web/20231117005052/https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
+See <a href="https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -2336,7 +2379,7 @@ MMF Ver </font></td></tr>
 <tr>
 <td align="right" valign="top">DAT</td>
 <td>&nbsp;</td>
-<td>Microsoft Internet Explorer cache file (<a href="https://web.archive.org/web/20231117005052/http://sourceforge.net/projects/odessa/files/ODESSA/White%20Papers/IE_Internet_Activity_Reconstruction.pdf/download" target="_blank">index.dat</a>) file<br><br></td>
+<td>Microsoft Internet Explorer cache file (<a href="http://sourceforge.net/projects/odessa/files/ODESSA/White%20Papers/IE_Internet_Activity_Reconstruction.pdf/download" target="_blank">index.dat</a>) file<br><br></td>
 </tr>
 
 <tr>
@@ -2402,6 +2445,20 @@ MMF Ver </font></td></tr>
 </tr>
 
 <tr>
+<td><font face="courier">[128 (0x80) byte offset]<br>
+44 49 43 4D</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">[128 (0x80) byte offset]<br>
+DICM</font></td></tr>
+<tr>
+<td align="right" valign="top">DCM</td>
+<td>&nbsp;</td>
+<td>Digital Imaging and Communications in Medicine (DICOM) file<br>
+See <a href="https://dicom.nema.org/dicom/2011/11_10pu.pdf" target="x"> <i>DICOM PS 3.10 2011 - Media Storage and File Format for Media Interchange</i></a> specification<br>
+<b>Trailer:</b> <font face="courier">FE FF D0 E0 00 00 00 00</font> (<font face="courier">}</font>)<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">44 4D 53 21</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">DMS!</font></td></tr>
@@ -2428,7 +2485,7 @@ MMF Ver </font></td></tr>
 <tr>
 <td align="right" valign="top">DSF</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://dsd-guide.com/sites/default/files/white-papers/DSFFileFormatSpec_E.pdf" target="_blank">DSD Storage Facility</a> audio file<br><br></td>
+<td><a href="http://dsd-guide.com/sites/default/files/white-papers/DSFFileFormatSpec_E.pdf" target="_blank">DSD Storage Facility</a> audio file<br><br></td>
 </tr>
 
 <tr>
@@ -2450,10 +2507,22 @@ MMF Ver </font></td></tr>
 <td align="right" valign="top">DVR</td>
 <td>&nbsp;</td>
 <td>DVR-Studio stream file</td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">IFO</td>
 <td>&nbsp;</td>
 <td>DVD info file<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">45 45 53 63 68 65 6D 61<br>
+2D 44 4F 43 4C 49 42 20</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">EESchema<br>
+-DOCLIB </font></td></tr>
+<tr>
+<td align="right" valign="top">DCM</td>
+<td>&nbsp;</td>
+<td>KiCad Documentation file<br><br></td>
 </tr>
 
 <tr>
@@ -2515,7 +2584,7 @@ DATAFILE</font></td></tr>
 <tr>
 <td><font face="courier">45 56 46 09 0D 0A FF 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">EVF...ÿ.</font></td></tr>
+<td><font face="courier">EVF...&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">E<i>nn</i>, S<i>nn</i></td>
 <td>&nbsp;</td>
@@ -2523,7 +2592,7 @@ DATAFILE</font></td></tr>
 and EWF-S01, as used in EnCase and SMART evidence files. Byte<br>
 offset 9 (i.e., byte #10) contains the segment number, starting with 0x01.<br>
 <i>nn</i> are the segment sequence number, taking on values 00..99, AA, AB...AZ, BA, BB...BZ, etc.<br>
-See the <a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%20(EWF).asciidoc" target="_blank">EWF specification</a>.<br><br></td>
+See the <a href="https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%20(EWF).asciidoc" target="_blank">EWF specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -2533,9 +2602,9 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <tr>
 <td align="right" valign="top">Ex<i>nn</i></td>
 <td>&nbsp;</td>
-<td>EnCase® Evidence File Format Version 2.<br>
+<td>EnCase&reg; Evidence File Format Version 2.<br>
 <i>nn</i> are the segment sequence number, taking on values 00..99, AA, AB...AZ, BA, BB...BZ, etc.<br>
-See the <a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%202%20(EWF2).asciidoc" target="_blank">EWF 2 specification</a>.<br><br></td>
+See the <a href="https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%202%20(EWF2).asciidoc" target="_blank">EWF 2 specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -2551,7 +2620,7 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <tr>
 <td><font face="courier">45 86 00 00 06 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">E†....</font></td></tr>
+<td><font face="courier">E&#x86;....</font></td></tr>
 <tr>
 <td align="right" valign="top">QBB</td>
 <td>&nbsp;</td>
@@ -2623,7 +2692,7 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <tr>
 <td align="right" valign="top">IFF</td>
 <td>&nbsp;</td>
-<td>Electronic Arts' <a href="https://web.archive.org/web/20231117005052/https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
+<td>Electronic Arts' <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
 </tr>
 
 <tr>
@@ -2649,7 +2718,7 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <td align="right" valign="top">SWF</td>
 <td>&nbsp;</td>
 <td>Macromedia Shockwave Flash player file (uncompressed). See <br>
-See <a href="https://web.archive.org/web/20231117005052/https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
+See <a href="https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
 
 </tr>
 
@@ -2680,7 +2749,7 @@ EML is also used by Outlook Express and QuickMail.<br><br></td>
 <tr>
 <td align="right" valign="top">TS, TSA, TSV</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/MPEG_transport_stream" target="_blank"> MPEG transport stream</a> file. (This is not a lot to go on, but MPEG-2 Part 1<br>
+<td><a href="https://en.wikipedia.org/wiki/MPEG_transport_stream" target="_blank"> MPEG transport stream</a> file. (This is not a lot to go on, but MPEG-2 Part 1<br>
 Transport (MP2T) files are reportedly broken into 188-byte packets and the<br>
 0x47 byte is the sync byte, so should repeat every 188 bytes in the file.)<br><br></td>
 </tr>
@@ -2828,7 +2897,7 @@ APCCDR..</font></td></tr>
 <tr>
 <td align="right" valign="top">CRW</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.sno.phy.queensu.ca/~phil/exiftool/canon_raw.html" target="blank">Canon digital camera RAW file</a><br><br></td>
+<td><a href="http://www.sno.phy.queensu.ca/~phil/exiftool/canon_raw.html" target="blank">Canon digital camera RAW file</a><br><br></td>
 </tr>
 
 <tr>
@@ -2851,7 +2920,7 @@ CR</font></td></tr>
 <tr>
 <td align="right" valign="top">CR2</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://lclevy.free.fr/cr2/" target="blank">Canon digital camera RAW file</a><br><br></td>
+<td><a href="http://lclevy.free.fr/cr2/" target="blank">Canon digital camera RAW file</a><br><br></td>
 </tr>
 
 <tr>
@@ -2935,7 +3004,7 @@ ive Page</font></td></tr>
 <tr>
 <td><font face="courier">4A 47 03 0E</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">JG..</font></td></tr>
+<td><font face="courier">JG..</td></tr>
 <tr>
 <td><font face="courier">4A 47 04 0E</font></td>
 <td>&nbsp;</td>
@@ -2945,8 +3014,8 @@ ive Page</font></td></tr>
 <td>&nbsp;</td>
 <td>AOL ART file<br>
 <b>Trailers:</b><br>
-For 0x4A-47-03-0E: <font face="courier">D0 CB 00 00</font> (<font face="courier">ÐË..</font>)<br>
-For 0x4A-47-04-0E: <font face="courier">CF C7 CB</font> (<font face="courier">ÏÇË</font>)<br><br></td>
+For 0x4A-47-03-0E: <font face="courier">D0 CB 00 00</font> (<font face="courier">&#xD0;&#xCB;..</font>)<br>
+For 0x4A-47-04-0E: <font face="courier">CF C7 CB</font> (<font face="courier">&#xCF;&#xC7;&#xCB;</font>)<br><br></td>
 </tr>
 
 <tr>
@@ -2994,14 +3063,14 @@ For 0x4A-47-04-0E: <font face="courier">CF C7 CB</font> (<font face="courier">Ï
 <tr>
 <td><font face="courier">4B 57 41 4A 88 F0 27 D1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">KWAJˆð'Ñ</font></td></tr>
+<td><font face="courier">KWAJ&#x88;&#xf0;'&#xd1;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>KWAJ file format used by DOS <font face="courier">COMPRESS.EXE</font> and <font face="courier">EXPAND.EXE</font> commands.<br>
 This command compresses a single file, replacing the last character in the file name<br>
 with an underscore or dollar sign, e.g., <font face="courier">FOO.BAZ</font> would be renamed <font face="courier">FOO.BA_</font> or<br>
-<font face="courier">FOO.BA$</font>. (See the <a href="https://web.archive.org/web/20231117005052/http://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html" target="_blank"> SZDD/KWAJ</a> page for more information.)<br><br></td>
+<font face="courier">FOO.BA$</font>. (See the <a href="http://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html" target="_blank"> SZDD/KWAJ</a> page for more information.)<br><br></td>
 </tr>
 
 <tr>
@@ -3011,8 +3080,8 @@ with an underscore or dollar sign, e.g., <font face="courier">FOO.BAZ</font> wou
 <tr>
 <td align="right" valign="top">LNK</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://msdn.microsoft.com/en-us/library/dd871305" target="_blank">Windows shell link (shortcut) file</a>. See also <a href="https://web.archive.org/web/20231117005052/http://computerforensics.parsonage.co.uk/downloads/TheMeaningofLIFE.pdf"> <i>The Meaning of Linkfiles in Forensic Examinations</i></a><br>
-and <a href="https://web.archive.org/web/20231117005052/https://www.forensicfocus.com/articles/evidentiary-value-of-link-files/" target="_blank">Evidentiary Value of Link Files</a>.<br><br></td>
+<td><a href="http://msdn.microsoft.com/en-us/library/dd871305" target="_blank">Windows shell link (shortcut) file</a>. See also <a href="http://computerforensics.parsonage.co.uk/downloads/TheMeaningofLIFE.pdf"> <i>The Meaning of Linkfiles in Forensic Examinations</i></a><br>
+and <a href="https://www.forensicfocus.com/articles/evidentiary-value-of-link-files/" target="_blank">Evidentiary Value of Link Files</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -3022,7 +3091,7 @@ and <a href="https://web.archive.org/web/20231117005052/https://www.forensicfocu
 <tr>
 <td align="right" valign="top">OBJ</td>
 <td>&nbsp;</td>
-<td>Microsoft <a href="https://web.archive.org/web/20231117005052/https://www.ti.com/lit/pdf/spraao8&amp;usg=AOvVaw3_tniIw3GnJ_6D_TTQBSam" target="_blank"> Common Object File Format (COFF)</a> relocatable<br>
+<td>Microsoft <a href="https://www.ti.com/lit/pdf/spraao8&usg=AOvVaw3_tniIw3GnJ_6D_TTQBSam" target="_blank"> Common Object File Format (COFF)</a> relocatable<br>
 object code file for an Intel 386 or later/compatible processors<br><br></td>
 </tr>
 
@@ -3036,7 +3105,6 @@ object code file for an Intel 386 or later/compatible processors<br><br></td>
 <td>Tajima embroidery sticj image file<br><br></td>
 </tr>
 
-<!-- ** NEW -->
 <tr>
 <td><font face="courier">4C 45 46 32 0D 0A 82 00</font></td>
 <td>&nbsp;</td>
@@ -3047,7 +3115,7 @@ object code file for an Intel 386 or later/compatible processors<br><br></td>
 <td>Logical File Evidence Format (EWF2-Lx01), used in Expert Witness Compression Format (EWF)<br>
 version 2 for Guidance Software Encase.<br>
 <i>nn</i> are the segment sequence number, taking on values 00..99, AA, AB...AZ, BA, BB...BZ, etc.<br>
-See the <a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%202%20(EWF2).asciidoc" target="_blank">EWF2 specification</a>.<br><br></td>
+See the <a href="https://github.com/libyal/libewf/blob/main/documentation/Expert%20Witness%20Compression%20Format%202%20(EWF2).asciidoc" target="_blank">EWF2 specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -3057,7 +3125,7 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <tr>
 <td align="right" valign="top">IFF</td>
 <td>&nbsp;</td>
-<td>Electronic Arts' <a href="https://web.archive.org/web/20231117005052/https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
+<td>Electronic Arts' <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000115.shtml" target="_blank"> Interchange Format Files (IFF)</a> format.<br><br></td>
 </tr>
 
 <tr>
@@ -3088,14 +3156,14 @@ See the <a href="https://web.archive.org/web/20231117005052/https://github.com/l
 <tr>
 <td><font face="courier">4C 56 46 09 0D 0A FF 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">LVF...ÿ.</font></td></tr>
+<td><font face="courier">LVF...&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">L<i>nn</i></td>
 <td>&nbsp;</td>
 <td>Logical File Evidence Format (EWF-L01) as used in Expert Witness Compression Format (EWF)<br>
 for Guidance Software Encase. Byte offset 9 (i.e., byte #10) contains the segment number, starting with 0x01.<br>
 <i>nn</i> are the segment sequence number, taking on values 00..99, AA, AB...AZ, BA, BB...BZ, etc.<br>
-See the <a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libewf/blob/master/documentation/Expert%20Witness%20Compression%20Format%20(EWF).asciidoc" target="_blank">EWF specification</a>.<br><br></td>
+See the <a href="https://github.com/libyal/libewf/blob/master/documentation/Expert%20Witness%20Compression%20Format%20(EWF).asciidoc" target="_blank">EWF specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -3169,7 +3237,7 @@ nogolies</font></td></tr>
 <tr>
 <td><font face="courier">4D 44 4D 50 93 A7</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">MDMP“§</font></td></tr>
+<td><font face="courier">MDMP&#x93;&#xA7;</font></td></tr>
 <tr>
 <td align="right" valign="top">HDMP</td>
 <td>&nbsp;</td>
@@ -3220,7 +3288,7 @@ endian, i.e., LSB last in the byte; Motorola)<br><br></td>
 <tr>
 <td align="right" valign="top">TIF, TIFF</td>
 <td>&nbsp;</td>
-<td>BigTIFF files; Tagged Image File Format files &gt;4 GB<br><br></td>
+<td>BigTIFF files; Tagged Image File Format files >4 GB<br><br></td>
 </tr>
 
 <tr>
@@ -3256,7 +3324,7 @@ for multimedia files that can be played on hand-held devices.<br><br></td>
 <tr>
 <td align="right" valign="top">ONEPKG</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://blogs.msdn.microsoft.com/descapa/2006/09/07/other-onenote-file-types-onenote-package-table-of-contents/" target="_blank">OneNote Package file</a></td>
+<td><a href="https://blogs.msdn.microsoft.com/descapa/2006/09/07/other-onenote-file-types-onenote-package-table-of-contents/" target="_blank">OneNote Package file</a></td>
 </tr>
 <tr>
 <td align="right" valign="top">PPZ</td>
@@ -3283,7 +3351,7 @@ for multimedia files that can be played on hand-held devices.<br><br></td>
 <td><font face="courier">4D 53 48 7C 5E 7E 5C 26<br>
 7C</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">MSH|^~\&amp;<br>
+<td><font face="courier">MSH|^~\&<br>
 |</font></td></tr>
 <tr>
 <td align="right" valign="top">HL7</td>
@@ -3323,7 +3391,7 @@ for multimedia files that can be played on hand-held devices.<br><br></td>
 <td align="right" valign="top">MID, MIDI</td>
 <td>&nbsp;</td>
 <td>Musical Instrument Digital Interface (MIDI) sound file</td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">PCS</td>
 <td>&nbsp;</td>
 <td>Yamaha Piano sound file<br><br></td>
@@ -3369,7 +3437,7 @@ for multimedia files that can be played on hand-held devices.<br><br></td>
 <td align="right" valign="top">COM, DLL, DRV, EXE, PIF, QTS, QTX, SYS</td>
 <td>&nbsp;</td>
 <td>Windows/DOS executable file<br>
-(See <a href="https://web.archive.org/web/20231117005052/http://www.fileformat.info/format/exe/corion-mz.htm" target="_blank"> The MZ EXE File Format</a> page for the structure of an EXE file,<br>
+(See <a href="http://www.fileformat.info/format/exe/corion-mz.htm" target="_blank"> The MZ EXE File Format</a> page for the structure of an EXE file,<br>
 with coverage of NE, TLINK, PE, self-extracting archives, and more.)<br>
 <b>Note:</b> MZ are the initals of Mark Zbikowski, designer of the DOS executable file format.</td>
 </tr>
@@ -3444,7 +3512,7 @@ with coverage of NE, TLINK, PE, self-extracting archives, and more.)<br>
 04 00 00 00 FF FF</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">MZ......<br>
-....ÿÿ</font></td></tr>
+....&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">ZAP</td>
 <td>&nbsp;</td>
@@ -3678,6 +3746,17 @@ aseFile</font></td></tr>
 </tr>
 
 <tr>
+<td><font face="courier">50 44 4E 33</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">PDN3</font></td></tr>
+<tr>
+<td align="right" valign="top">PDN</td>
+<td>&nbsp;</td>
+<td>Paint.NET image (v3)<br><br></td>
+</tr>
+
+
+<tr>
 <td><font face="courier">50 45 53 54</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">PEST</font></td></tr>
@@ -3714,7 +3793,7 @@ aseFile</font></td></tr>
 <tr>
 <td align="right" valign="top">ZIP</td>
 <td>&nbsp;</td>
-<td>PKZIP archive file (<a href="https://web.archive.org/web/20231117005052/http://members.tripod.com/~petlibrary/ZIP.HTM" target="_blank">Ref. 1</a> | <a href="https://web.archive.org/web/20231117005052/http://www.pkware.com/documents/casestudies/APPNOTE.TXT" target="_blank">Ref. 2</a>)<br>
+<td>PKZIP archive file (<a href="http://members.tripod.com/~petlibrary/ZIP.HTM" target="_blank">Ref. 1</a> | <a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT" target="_blank">Ref. 2</a>)<br>
 <b>Trailer:</b> <i>filename </i><font face="courier">50 4B</font><i> 17 characters </i><font face="courier">00 00 00</font><br>
 <b>Trailer:</b> (<i>filename </i><font face="courier">PK</font><i> 17 characters </i><font face="courier">...</font>)<br>
 <b>Note:</b> PK are the initals of Phil Katz, co-creator of the ZIP file format and author of PKZIP.</td>
@@ -3821,7 +3900,7 @@ c.....</font></td>
 <td align="right" valign="top">DOCX, PPTX, XLSX</td>
 <td>&nbsp;</td>
 <td>Microsoft Office Open XML Format (OOXML) Document<br>
-<b>NOTE:</b> There is no subheader for MS OOXML files as there is with<br>
+<b>NOTE:</b> There is no subheader for MS OOXML files as there is with</br>
 DOC, PPT, and XLS files. To better understand the format of these files,<br>
 rename any OOXML file to have a .ZIP extension and then unZIP the file;<br>
 look at the resultant file named <i>[Content_Types].xml</i> to see the content<br>
@@ -3913,8 +3992,8 @@ PKSFX</font></td></tr>
 <tr>
 <td align="right" valign="top">DAT</td>
 <td>&nbsp;</td>
-<td>Microsoft® Windows® User State Migration Tool (USMT). <a href="https://web.archive.org/web/20231117005052/http://technet.microsoft.com/en-us/library/cc722032%28v=ws.10%29.aspx" target="_blank"> USMT 3.0</a><br>
-applies to Windows XP and Windows Vista®, and <a href="https://web.archive.org/web/20231117005052/http://technet.microsoft.com/en-us/library/dd560801.aspx" target="_blank"> USMT 4.0</a> is for Windows 7.<br><br></td>
+<td>Microsoft&reg; Windows&reg; User State Migration Tool (USMT). <a href="http://technet.microsoft.com/en-us/library/cc722032%28v=ws.10%29.aspx" target="_blank"> USMT 3.0</a><br>
+applies to Windows XP and Windows Vista&reg;, and <a href="http://technet.microsoft.com/en-us/library/dd560801.aspx" target="_blank"> USMT 4.0</a> is for Windows 7.<br><br></td>
 </tr>
 
 <tr>
@@ -3924,7 +4003,7 @@ applies to Windows XP and Windows Vista®, and <a href="https://web.archive.org/
 <tr>
 <td align="right" valign="top">DSF</td>
 <td>&nbsp;</td>
-<td> Dreamcast Sound Format file, a subset of the <a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/Portable_Sound_Format" target="_blank">Portable Sound Format</a>.<br><br></td>
+<td> Dreamcast Sound Format file, a subset of the <a href="https://en.wikipedia.org/wiki/Portable_Sound_Format" target="_blank">Portable Sound Format</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -3934,7 +4013,7 @@ applies to Windows XP and Windows Vista®, and <a href="https://web.archive.org/
 <tr>
 <td align="right" valign="top">PUF</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.briggsoft.com/puffer.htm" target="_blank">Puffer</a> encrypted archive<br><br></td>
+<td><a href="http://www.briggsoft.com/puffer.htm" target="_blank">Puffer</a> encrypted archive<br><br></td>
 </tr>
 
 <tr>
@@ -3962,7 +4041,7 @@ QEL </font></td></tr>
 <tr>
 <td><font face="courier">51 46 49 FB</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">QFIû</font></td></tr>
+<td><font face="courier">QFI&#xFB;</font></td></tr>
 <tr>
 <td align="right" valign="top">IMG</td>
 <td>&nbsp;</td>
@@ -4081,7 +4160,7 @@ AVI LIST</font></td></tr>
 <tr>
 <td align="right" valign="top">AVI</td>
 <td>&nbsp;</td>
-<td>Resource Interchange File Format -- <a href="https://web.archive.org/web/20231117005052/http://msdn.microsoft.com/en-us/library/aa931363.aspx" target="_blank"> Windows Audio Video<br>
+<td>Resource Interchange File Format -- <a href="http://msdn.microsoft.com/en-us/library/aa931363.aspx" target="_blank"> Windows Audio Video<br>
 Interleave file</a>, where <i>xx xx xx xx</i> is the file size (little endian)<br><br></td>
 </tr>
 
@@ -4120,7 +4199,7 @@ RMIDdata</font></td></tr>
 <tr>
 <td align="right" valign="top">RMI</td>
 <td>&nbsp;</td>
-<td>Resource Interchange File Format -- <a href="https://web.archive.org/web/20231117005052/https://www.loc.gov/preservation/digital/formats/fdd/fdd000120.shtml" target="_blank"> Windows Musical<br>
+<td>Resource Interchange File Format -- <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000120.shtml" target="_blank"> Windows Musical<br>
 Instrument Digital Interface file</a>, where <i>xx xx xx xx</i> is the file<br>
 size (little endian)<br><br></td>
 </tr>
@@ -4134,8 +4213,8 @@ WAVEfmt </font></td></tr>
 <tr>
 <td align="right" valign="top">WAV</td>
 <td>&nbsp;</td>
-<td>Resource Interchange File Format -- <a href="https://web.archive.org/web/20231117005052/https://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html" target="_blank"> Audio for Windows<br>
-file</a>, where <i>xx xx xx xx</i> is the file size (little endian)<br><br></td>
+<td>Resource Interchange File Format -- <a href="https://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html" target="_blank"> Audio for Windows<br>
+file</a>, where <i>xx xx xx xx</i> is the file size (little endian)</a><br><br></td>
 </tr>
 
 <tr>
@@ -4147,7 +4226,7 @@ WEBP</font></td></tr>
 <tr>
 <td align="right" valign="top">WEBP</td>
 <td>&nbsp;</td>
-<td>Google <a href="https://web.archive.org/web/20231117005052/https://developers.google.com/speed/webp/docs/riff_container" target="_blank"> WebP image file</a>, where <i>xx xx xx xx</i> is the file size<br><br></td>
+<td>Google <a href="https://developers.google.com/speed/webp/docs/riff_container" target="_blank"> WebP image file</a>, where <i>xx xx xx xx</i> is the file size<br><br></td>
 </tr>
 
 <tr>
@@ -4177,7 +4256,7 @@ WEBP</font></td></tr>
 <tr>
 <td align="right" valign="top">RAR</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.rarlab.com/technote.htm" target="_blank">RAR (v5)</a> compressed archive file<br><br></td>
+<td><a href="http://www.rarlab.com/technote.htm" target="_blank">RAR (v5)</a> compressed archive file<br><br></td>
 </tr>
 
 <tr>
@@ -4204,7 +4283,7 @@ SCCA</font></td></tr>
 <td>Windows prefetch file. The first four bytes indicate the OS:<br>
 0x11-00-00-00 = XP, 0x17-00-00-00 = Vista/Win7,<br>
 and 0x1A-00-00-00 = Win8.1 (and probably Win8, as well).<br>
-See <a href="https://web.archive.org/web/20231117005052/https://www.magnetforensics.com/blog/forensic-analysis-of-prefetch-files-in-windows/" target="x"> "Forensic Analysis of Prefetch files in Windows"</a>.<br><br></td>
+See <a href="https://www.magnetforensics.com/blog/forensic-analysis-of-prefetch-files-in-windows/" target="x"> "Forensic Analysis of Prefetch files in Windows"</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -4276,7 +4355,7 @@ CAN</font></td></tr>
 <tr>
 <td align="right" valign="top">FITS</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/fdd000317.shtml" target="_blank">Flexible Image Transport System (FITS), Version 3.0</a> file<br><br></td>
+<td><a href="http://www.digitalpreservation.gov/formats/fdd/fdd000317.shtml" target="_blank">Flexible Image Transport System (FITS), Version 3.0</a> file<br><br></td>
 </tr>
 
 <tr>
@@ -4346,7 +4425,7 @@ ormat 3.</font></td></tr>
 <tr>
 <td><font face="courier">53 5A 20 88 F0 27 33 D1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">SZ ˆð'3Ñ</font></td></tr>
+<td><font face="courier">SZ &#x88;&#xf0;'3&#xd1;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -4357,14 +4436,14 @@ for additional information.)<br><br></td>
 <tr>
 <td><font face="courier">53 5A 44 44 88 F0 27 33</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">SZDDˆð'3</font></td></tr>
+<td><font face="courier">SZDD&#x88;&#xf0;'3</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>SZDD file format used by DOS <font face="courier">COMPRESS.EXE</font> and <font face="courier">EXPAND.EXE</font> commands.<br>
 This command compresses a single file, replacing the last character in the file name<br>
 with an underscore or dollar sign, e.g., <font face="courier">FOO.BAZ</font> would be renamed <font face="courier">FOO.BA_</font> or<br>
-<font face="courier">FOO.BA$</font>. (See the <a href="https://web.archive.org/web/20231117005052/http://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html" target="_blank"> SZDD/KWAJ</a> page for more information.)<br><br></td>
+<font face="courier">FOO.BA$</font>. (See the <a href="http://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html" target="_blank"> SZDD/KWAJ</a> page for more information.)<br><br></td>
 </tr>
 
 <tr>
@@ -4409,7 +4488,7 @@ c</font></td></tr>
 <tr>
 <td align="right" valign="top">THP</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.amnoid.de/gc/thp.txt" target="_blank">Wii/GameCube video</a> file<br><br></td>
+<td><a href="http://www.amnoid.de/gc/thp.txt" target="_blank">Wii/GameCube video</a> file<br><br></td>
 </tr>
 
 <tr>
@@ -4435,7 +4514,7 @@ c</font></td></tr>
 <tr>
 <td><font face="courier">55 46 41 C6 D2 C1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">UFAÆÒÁ</font></td></tr>
+<td><font face="courier">UFA&#xC6;&#xD2;&#xC1;</font></td></tr>
 <tr>
 <td align="right" valign="top">UFA</td>
 <td>&nbsp;</td>
@@ -4459,7 +4538,7 @@ c</font></td></tr>
 <tr>
 <td align="right" valign="top">MF4</td>
 <td>&nbsp;</td>
-<td>Unfinalized <a href="https://web.archive.org/web/20231117005052/https://www.asam.net/standards/detail/mdf/" target="x"> Measurement Data Format (MDF)</a> file<br><br></td>
+<td>Unfinalized <a href="https://www.asam.net/standards/detail/mdf/" target="x"> Measurement Data Format (MDF)</a> file<br><br></td>
 </tr>
 
 <tr>
@@ -4501,7 +4580,7 @@ c</font></td></tr>
 <tr>
 <td align="right" valign="top">SCT</td>
 <td>&nbsp;</td>
-<td>SPSS Statistics (née Statistical Package for the Social Sciences, then<br>
+<td>SPSS Statistics (n&eacute;e Statistical Package for the Social Sciences, then<br>
 Statistical Product and Service Solutions) template file<br><br></td>
 </tr>
 
@@ -4620,7 +4699,7 @@ Digital Picture Exchange (DPX) image file (little endian)<br><br></td>
 <td align="right" valign="top">SWF</td>
 <td>&nbsp;</td>
 <td>Macromedia Shockwave Flash player file (LZMA compressed, SWF 13 and later).<br>
-See <a href="https://web.archive.org/web/20231117005052/https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
+See <a href="https://open-flash.github.io/mirrors/swf-spec-19.pdf" target="_blank"> SWF File Format Specification</a>.<br><br></td>
 </tr>
 
 <tr>
@@ -4736,7 +4815,7 @@ t]</font></td></tr>
 <tr>
 <td><font face="courier">5D FC C8 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">]üÈ.</font></td></tr>
+<td><font face="courier">]&#xFC;&#xC8;.</font></td></tr>
 <tr>
 <td align="right" valign="top">HUS</td>
 <td>&nbsp;</td>
@@ -4746,7 +4825,7 @@ t]</font></td></tr>
 <tr>
 <td><font face="courier">5F 27 A8 89</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">_'¨‰</font></td></tr>
+<td><font face="courier">_'&#xA8;&#x89;</font></td></tr>
 <tr>
 <td align="right" valign="top">JAR</td>
 <td>&nbsp;</td>
@@ -4766,7 +4845,7 @@ t]</font></td></tr>
 <tr>
 <td><font face="courier">60 EA</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">`ê</font></td></tr>
+<td><font face="courier">`&#xEA;</font></td></tr>
 <tr>
 <td align="right" valign="top">ARJ</td>
 <td>&nbsp;</td>
@@ -4784,7 +4863,7 @@ t]</font></td></tr>
  &nbsp; begin <i>mode path</i><br>
 where <i>mode</i> is the set of permissions as used in<br>
 Linux/Unix and <i>path</i> is the name given to the decoded<br>
-file. (See this <a href="https://web.archive.org/web/20231117005052/http://www.mkssoftware.com/docs/man4/uuencode.4.asp" target="_blank"> uuencode</a> page for more information.)
+file. (See this <a href="http://www.mkssoftware.com/docs/man4/uuencode.4.asp" target="_blank"> uuencode</a> page for more information.)
 <br><br></td>
 </tr>
 
@@ -4822,7 +4901,7 @@ se64</font></td></tr>
 <tr>
 <td align="right" valign="top">CAF</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://developer.apple.com/library/mac/documentation/musicaudio/Reference/CAFSpec/CAF_intro/CAF_intro.html" target="blank">Apple Core Audio File</a><br><br></td>
+<td><a href="https://developer.apple.com/library/mac/documentation/musicaudio/Reference/CAFSpec/CAF_intro/CAF_intro.html" target="blank">Apple Core Audio File</a><br><br></td>
 </tr>
 
 <tr>
@@ -4835,14 +4914,13 @@ se64</font></td></tr>
 <td>Macintosh encrypted Disk image (v1)<br><br></td></tr>
 
 <tr>
-<td><font face="courier">63 6F 6E 65 63 74 69 78
-</font></td>
+<td><font face="courier">63 6F 6E 65 63 74 69 78</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">conectix</font></td></tr>
 <tr>
 <td align="right" valign="top">VHD</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libvhdi/blob/main/documentation/Virtual%20Hard%20Disk%20(VHD)%20image%20format.asciidoc" target="_blank">Virtual PC Virtual HD image</a><br><br></td>
+<td><a href="https://github.com/libyal/libvhdi/blob/main/documentation/Virtual%20Hard%20Disk%20(VHD)%20image%20format.asciidoc" target="_blank">Virtual PC Virtual HD image</a> footer<br><br></td>
 </tr>
 
 <tr>
@@ -4855,6 +4933,16 @@ se64</font></td></tr>
 <td align="right" valign="top">CSH</td>
 <td>&nbsp;</td>
 <td>Photoshop Custom Shape<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">63 78 73 70 61 72 73 65</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">cxsparse</font></td></tr>
+<tr>
+<td align="right" valign="top">VHD</td>
+<td>&nbsp;</td>
+<td><a href="https://github.com/libyal/libvhdi/blob/main/documentation/Virtual%20Hard%20Disk%20(VHD)%20image%20format.asciidoc" target="_blank">Virtual PC Virtual HD image</a> dynamic disk header<br><br></td>
 </tr>
 
 <tr>
@@ -4984,6 +5072,34 @@ ftypMSNV</font></td></tr>
 
 <tr>
 <td><font face="courier">[4 byte offset]<br>
+66 74 79 70 61 76 69 66</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">[4 byte offset]<br>
+ftypavif</font></td></tr>
+<tr>
+<td align="right" valign="top">AVIF</td>
+<td>&nbsp;</td>
+<td><a href="https://aomediacodec.github.io/av1-avif/" target="x"> AV1 Image File Format (AVIF)</a>, based on the open source <a href="https://aomedia.org/" target="x"> Alliance for Open Media</a> (AOMedia)<br>
+Video 1 (AV1) codec.<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">[4 byte offset]<br>
+66 74 79 70 68 65 69 63</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">[4 byte offset]<br>
+ftypheic</font></td></tr>
+<tr>
+<td align="right" valign="top">HEIC</td>
+<td>&nbsp;</td>
+<td>High Efficiency Image Container (HEIC), holding one or more High Efficiency Image File (HEIF)<br>
+&#151; aka H.265 &#151; images, created using the High Efficiency Video Coding (HEVC) algorithm.<br>
+Developed by the Moving Pictures Experts Group (MPEG) and adopted by Apple as the standard image<br>
+file format in 2017.<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">[4 byte offset]<br>
 66 74 79 70 69 73 6F 6D</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[4 byte offset]<br>
@@ -5051,19 +5167,18 @@ image file<br><br></td>
 <td>Windows Server 2003 printer spool file<br><br></td>
 </tr>
 
-<!-- ** NEW ** -->
 <tr>
-<td><font face="courier">6B 87 08 38 76 C1 48 4E<br>
+<td><font face="courier">68 87 08 38 76 C1 48 4E<br>
 B7 AE 04 04 6E 6C C7 52<br>
 01 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">h‡.8vÁHN<br>
-·®..nlÇR<br>
+<td><font face="courier">h&#x87;.8v&#xC1;HN<br>
+&#xB7;&#xAE;..nl&#xC7;R<br>
 ..</font></td></tr>
 <tr>
 <td align="right" valign="top">VSC</td>
 <td>&nbsp;</td>
-<td>Windows OS <a href="https://web.archive.org/web/20231117005052/https://forensic4cast.com/2010/04/into-the-shadows/" target="x">Volume Shadow Copy</a>, index block header<br><br></td>
+<td>Windows OS <a href="https://forensic4cast.com/2010/04/into-the-shadows/" target="x">Volume Shadow Copy</a>, index block header<br><br></td>
 </tr>
 
 <tr>
@@ -5099,7 +5214,7 @@ moov</font></td></tr>
 <td>QuickTime movie file<br><br></td>
 </tr>
 <tr>
-<td colspan="3">
+<td colspan=3>
 <blockquote>
 .MOV files have a complicated file signature. The string "<font face="courier">moov</font>" is the most common but I have also seen:<br>
 <font face="courier"> &nbsp; 0x66-72-65-65 &nbsp; free</font><br>
@@ -5110,7 +5225,7 @@ moov</font></td></tr>
 <font face="courier"> &nbsp; 0x73-6B-69-70 &nbsp; skip</font><br>
 <br>Furthermore, if you look at byte position <font face="courier">xxxxxxxx</font>+4 (where <font face="courier">xxxxxxxx</font> is bytes 0-3 of the header), you<br>
 will find one (or more!) of these strings repeated; the string "<font face="courier">free</font>" <b>seems</b> to be the most common. For<br>
-more information, see the <a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/fdd000052.shtml" target="_blank"> QuickTime File Format</a> page. (Thanks to D. Wright for getting me started on this!)
+more information, see the <a href="http://www.digitalpreservation.gov/formats/fdd/fdd000052.shtml" target="_blank"> QuickTime File Format</a> page. (Thanks to D. Wright for getting me started on this!)
 <br><br>
 </blockquote>
 </td>
@@ -5138,6 +5253,16 @@ List</font></td></tr>
 <td align="right" valign="top">INFO</td>
 <td>&nbsp;</td>
 <td>MultiBit Bitcoin wallet information file<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">6E 65 74 63 64 66 20</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">netcdf </font></td></tr>
+<tr>
+<td align="right" valign="top">CDL</td>
+<td>&nbsp;</td>
+<td><a href="https://www.unidata.ucar.edu/software/netcdf/examples/files.html" target="x">NetCDF (Network Common Data Form) </a>metadata files<br><br></td>
 </tr>
 
 <tr>
@@ -5228,7 +5353,7 @@ Subscriber Identification Module (SIM).<br><br></td>
 <tr>
 <td align="right" valign="top">STL</td>
 <td>&nbsp;</td>
-<td>ASCII <a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/STL_%28file_format%29" target="_blank">STL (STereoLithography) file</a> for 3D printing.<br><br></td>
+<td>ASCII <a href="https://en.wikipedia.org/wiki/STL_%28file_format%29" target="_blank">STL (STereoLithography) file</a> for 3D printing.<br><br></td>
 </tr>
 
 <tr>
@@ -5284,7 +5409,7 @@ ustar</font></td></tr>
 <tr>
 <td align="right" valign="top">TAR</td>
 <td>&nbsp;</td>
-<td>Tape Archive file (<a href="https://web.archive.org/web/20231117005052/http://www.mkssoftware.com/docs/man4/tar.4.asp" target="_blank">http://www.mkssoftware.com/docs/man4/tar.4.asp</a>)<br><br></td>
+<td>Tape Archive file (<a href="http://www.mkssoftware.com/docs/man4/tar.4.asp" target="_blank">http://www.mkssoftware.com/docs/man4/tar.4.asp</a>)<br><br></td>
 </tr>
 
 <tr>
@@ -5346,7 +5471,7 @@ ustar</font></td></tr>
 <tr>
 <td align="right" valign="top">XAR</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://code.google.com/p/xar/wiki/xarformat" target="_blank">eXtensible ARchive</a> file<br><br></td>
+<td><a href="https://code.google.com/p/xar/wiki/xarformat" target="_blank">eXtensible ARchive</a> file<br><br></td>
 </tr>
 
 <tr>
@@ -5379,10 +5504,22 @@ ustar</font></td></tr>
 <td align="right" valign="top">GDOC</td>
 <td>&nbsp;</td>
 <td>Google Drive Document link<br></td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">GDRAW</td>
 <td>&nbsp;</td>
 <td>Google Drive Drawing link<br><br></td>
+</tr>
+
+<tr>
+<td><font face="courier">7B 44 52 4D 50 44 4B 7D</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">{DRMPDK}<br>
+....</font></td></tr>
+<tr>
+<td align="right" valign="top">DRMX, DRMZ</td>
+<td>&nbsp;</td>
+<td>Drumlin Fully Secure PDF file. These files use a proprietary format that requires the Javelin PDF<br>
+Reader to be viewed and a unique authorization code. DRMZ files are compatible with mobile devices.<br><br></td>
 </tr>
 
 <tr>
@@ -5410,8 +5547,8 @@ ustar</font></td></tr>
 <td><font face="courier">7C 4B C3 74 E1 C8 53 A4<br>
 79 B9 01 1D FC 4F DD 13</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">|KÃtáÈS¤<br>
-y¹..üOÝ.</font></td></tr>
+<td><font face="courier">|K&#xC3;t&#xE1;&#xC8;S&#xA4;<br>
+y&#xB9;..&#xFC;O&#xDD;.</font></td></tr>
 <tr>
 <td align="right" valign="top">CSD</td>
 <td>&nbsp;</td>
@@ -5434,8 +5571,8 @@ BF 6A D2 11 45 61 73 79<br>
 20 53 74 72 65 65 74 20<br>
 44 72 61 77</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">~ESDwö…&gt;<br>
-¿jÒ.Easy<br>
+<td><font face="courier">~ESDw&#xF6&#x85><br>
+&#xBFj&#xD2.Easy<br>
 &nbsp;Street <br>
 Draw</font></td></tr>
 <tr>
@@ -5455,7 +5592,7 @@ Draw</font></td></tr>
 <td><font face="courier">~t,.Pp.M<br>
 R.......<br>
 ....1...<br>
-1...C.ÿ.<br>
+1...C.&#xFF;.<br>
 ........<br>
 ~t,.</font></td></tr>
 <tr>
@@ -5472,7 +5609,7 @@ Digital Watchdog DW-TP-500G unit.<br><br></td>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.skyfree.org/linux/references/ELF_Format.pdf" target="_blank">Executable and Linking Format executable file (Linux/Unix)</a><br><br></td>
+<td><a href="http://www.skyfree.org/linux/references/ELF_Format.pdf" target="_blank">Executable and Linking Format executable file (Linux/Unix)</a><br><br></td>
 </tr>
 
 <tr>
@@ -5492,7 +5629,7 @@ Digital Watchdog DW-TP-500G unit.<br><br></td>
 <tr>
 <td align="right" valign="top">ADX</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://en.wikipedia.org/wiki/ADX_(file_format)" target="_blank">ADX</a> lossy compressed audio file<br><br></td>
+<td><a href="https://en.wikipedia.org/wiki/ADX_(file_format)" target="_blank">ADX</a> lossy compressed audio file<br><br></td>
 </tr>
 
 <tr>
@@ -5509,8 +5646,8 @@ Digital Watchdog DW-TP-500G unit.<br><br></td>
 <td><font face="courier">81 32 84 C1 85 05 D0 11<br>
 B2 90 00 AA 00 3C F6 76</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.2„Á….Ð.<br>
-²..ª.&lt;öv</font></td></tr>
+<td><font face="courier">.2&#x84;&#xC1;&#x85.&#xD0;.<br>
+&#xB2;..&#xAA;.&lt;&#xF6;v</font></td></tr>
 <tr>
 <td align="right" valign="top">WAB</td>
 <td>&nbsp;</td>
@@ -5520,7 +5657,7 @@ B2 90 00 AA 00 3C F6 76</font></td>
 <tr>
 <td><font face="courier">81 CD AB</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">.Í«</font></td></tr>
+<td><font face="courier">.&#xCD;&#xAB;</font></td></tr>
 <tr>
 <td align="right" valign="top">WPF</td>
 <td>&nbsp;</td>
@@ -5530,7 +5667,7 @@ B2 90 00 AA 00 3C F6 76</font></td>
 <tr>
 <td><font face="courier">86 DD 6x</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">†Ý<b>{lower_case letter}</b></font></td></tr>
+<td><font face="courier">&#x86;&#xDD;<b>{lower_case letter}</b></font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -5541,44 +5678,44 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <tr>
 <td><font face="courier">89 50 4E 47 0D 0A 1A 0A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">‰PNG....</font></td></tr>
+<td><font face="courier">&#x89;PNG....</font></td></tr>
 <tr>
 <td align="right" valign="top">PNG</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.libpng.org/pub/png/spec/" target="_blank">Portable Network Graphics file</a><br>
-<b>Trailer:</b> <font face="courier">49 45 4E 44 AE 42 60 82</font> (<font face="courier">IEND®B`‚</font><font face="courier">...</font>)<br><br></td>
+<td><a href="http://www.libpng.org/pub/png/spec/" target="_blank">Portable Network Graphics file</a><br>
+<b>Trailer:</b> <font face="courier">49 45 4E 44 AE 42 60 82</font> (<font face="courier">IEND&#xAE;B`&#x82;</font><font face="courier">...</font>)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">8A 01 09 00 00 00 E1 08<br>
 00 00 99 19</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Š.....á.<br>
-..™.</font></td></tr>
+<td><font face="courier">&#x8A;.....&#xE1;.<br>
+..&#x99;.</font></td></tr>
 <tr>
 <td align="right" valign="top">AW</td>
 <td>&nbsp;</td>
-<td>MS Answer Wizard file<br><br></td>
+<td>MS Answer Wizard file</a><br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">91 33 48 46</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">‘3HF</font></td></tr>
+<td><font face="courier">&#x91;3HF</font></td></tr>
 <tr>
 <td align="right" valign="top">HAP</td>
 <td>&nbsp;</td>
-<td>Hamarsoft HAP 3.x compressed archive<br><br></td>
+<td>Hamarsoft HAP 3.x compressed archive</a><br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">95 00</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">•.</font></td></tr>
+<td><font face="courier">&#x95;.</font></td></tr>
 <tr>
 <td><font face="courier">95 01</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">•.</font></td></tr>
+<td><font face="courier">&#x95;.</font></td></tr>
 <tr>
 <td align="right" valign="top">SKR</td>
 <td>&nbsp;</td>
@@ -5588,7 +5725,7 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <tr>
 <td><font face="courier">97 4A 42 32 0D 0A 1A 0A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">—JB2....</font></td></tr>
+<td><font face="courier">&#x97;JB2....</font></td></tr>
 <tr>
 <td align="right" valign="top">JB2</td>
 <td>&nbsp;</td>
@@ -5599,7 +5736,7 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <tr>
 <td><font face="courier">99</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">™</font></td></tr>
+<td><font face="courier">&#x99;</font></td></tr>
 <tr>
 <td align="right" valign="top">GPG</td>
 <td>&nbsp;</td>
@@ -5609,7 +5746,7 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <tr>
 <td><font face="courier">99 01</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">™.</font></td></tr>
+<td><font face="courier">&#x99;.</font></td></tr>
 <tr>
 <td align="right" valign="top">PKR</td>
 <td>&nbsp;</td>
@@ -5620,8 +5757,8 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 <td><font face="courier">9C CB CB 8D 13 75 D2 11<br>
 91 58 00 C0 4F 79 56 A4</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">œËË..UÒ.<br>
-‘X.ÀOyV¤</font></td></tr>
+<td><font face="courier">&#x9C;&#xCB;&#xCB;..U&#xD2;.<br>
+&#x91;X.&#xC0;OyV&#xA4;</font></td></tr>
 <tr>
 <td align="right" valign="top">WAB</td>
 <td>&nbsp;</td>
@@ -5633,7 +5770,7 @@ an IPv6 packet. See <a href="netsig.html" target="_blank"> Hints About Looking f
 A0 46 1D F0</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-&nbsp;F.ð</font></td></tr>
+&#xA0;F.&#xF0;</font></td></tr>
 <tr>
 <td align="right" valign="top">PPT</td>
 <td>&nbsp;</td>
@@ -5643,7 +5780,7 @@ A0 46 1D F0</font></td>
 <tr>
 <td><font face="courier">A1 B2 C3 D4</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¡²ÃÔ</font></td></tr>
+<td><font face="courier">&#xA1;&#xB2;&#xC3;&#xD4;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -5653,7 +5790,7 @@ A0 46 1D F0</font></td>
 <tr>
 <td><font face="courier">A1 B2 CD 34</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¡²Í4</font></td></tr>
+<td><font face="courier">&#xA1;&#xB2;&#xCD;&#x34;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -5661,9 +5798,19 @@ A0 46 1D F0</font></td>
 </tr>
 
 <tr>
+<td><font face="courier">A3 DE B0</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">&#xA3;&#xDE;&#xB0;</font></td></tr>
+<tr>
+<td align="right" valign="top">HED</td>
+<td>&nbsp;</td>
+<td> HighEdit document<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">A9 0D 00 00 00 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">©.......</font></td></tr>
+<td><font face="courier">&#xA9;.......</font></td></tr>
 <tr>
 <td align="right" valign="top">DAT</td>
 <td>&nbsp;</td>
@@ -5674,18 +5821,18 @@ A0 46 1D F0</font></td>
 <td><font face="courier">AB 4B 54 58 20 31 31 BB<br>
 0D 0A 1A 0A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">«KTX 11»<br>
+<td><font face="courier">&#xAB;KTX 11&#xBB;<br>
 ....</font></td></tr>
 <tr>
 <td align="right" valign="top">KTX</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/" target="_blank">Khronos texture file</a> for OpenGL and OpenGL ES applications<br><br></td>
+<td><a href="https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/" target="_blank">Khronos texture file</a> for OpenGL and OpenGL ES applications<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">AC 9E BD 8F 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¬.½...</font></td></tr>
+<td><font face="courier">&#xAC;.&#xBD;...</font></td></tr>
 <tr>
 <td align="right" valign="top">QDF</td>
 <td>&nbsp;</td>
@@ -5695,18 +5842,18 @@ A0 46 1D F0</font></td>
 <tr>
 <td><font face="courier">AC ED</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¬í</font></td></tr>
+<td><font face="courier">&#xAC;&#xED;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Java serialization data (see <a href="https://web.archive.org/web/20231117005052/http://java.sun.com/j2se/1.5.0/docs/guide/serialization/spec/protocol.html#10258" target="_blank"> Object Serialization Stream Protocol</a>)<br><br></td>
+<td>Java serialization data (see <a href="http://java.sun.com/j2se/1.5.0/docs/guide/serialization/spec/protocol.html#10258" target="_blank"> Object Serialization Stream Protocol</a>)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">AC ED 00 05 73 72 00 12<br>
 62 67 62 6C 69 74 7A 2E</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¬í..sr..<br>
+<td><font face="courier">&#xAC;&#xED;..sr..<br>
 bgblitz.</font></td></tr>
 <tr>
 <td align="right" valign="top">PDB</td>
@@ -5717,7 +5864,7 @@ bgblitz.</font></td></tr>
 <tr>
 <td><font face="courier">B0 4D 46 43</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">°MFC</font></td></tr>
+<td><font face="courier">&#xB0;MFC</font></td></tr>
 <tr>
 <td align="right" valign="top">PWL</td>
 <td>&nbsp;</td>
@@ -5727,7 +5874,7 @@ bgblitz.</font></td></tr>
 <tr>
 <td><font face="courier">B1 68 DE 3A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">±hÞ:</font></td></tr>
+<td><font face="courier">&#xB1;h&#xDE;:</font></td></tr>
 <tr>
 <td align="right" valign="top">DCX</td>
 <td>&nbsp;</td>
@@ -5737,7 +5884,7 @@ bgblitz.</font></td></tr>
 <tr>
 <td><font face="courier">B4 6E 68 44</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">´nhd</font></td></tr>
+<td><font face="courier">&#xB4;nhd</font></td></tr>
 <tr>
 <td align="right" valign="top">TIB</td>
 <td>&nbsp;</td>
@@ -5747,7 +5894,7 @@ bgblitz.</font></td></tr>
 <tr>
 <td><font face="courier">B5 A2 B0 B3 B3 B0 A5 B5</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">µ¢°³³°¥µ</font></td></tr>
+<td><font face="courier">&#xB5;&#xA2;&#xB0;&#xB3;&#xB3;&#xB0;&#xA5;&#xB5;</font></td></tr>
 <tr>
 <td align="right" valign="top">CAL</td>
 <td>&nbsp;</td>
@@ -5757,7 +5904,7 @@ bgblitz.</font></td></tr>
 <tr>
 <td><font face="courier">B8 C9 0C 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¸É..</font></td></tr>
+<td><font face="courier">&#xB8;&#xC9;..</font></td></tr>
 <tr>
 <td align="right" valign="top">INS</td>
 <td>&nbsp;</td>
@@ -5768,7 +5915,7 @@ bgblitz.</font></td></tr>
 <td><font face="courier">BE 00 00 00 AB 00 00 00<br>
 00 00 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¾...«...<br>
+<td><font face="courier">&#xBE;...&#xAB;...<br>
 ....</font></td></tr>
 <tr>
 <td align="right" valign="top">WRI</td>
@@ -5780,7 +5927,7 @@ bgblitz.</font></td></tr>
 <td><font face="courier">BE BA FE CA 0F 50 61 6C<br>
 6D 53 47 20 44 61 74 61</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">¾ºþÊ.Pal<br>
+<td><font face="courier">&#xBE;&#xBA;&#xFE;&#xCA;.Pal<br>
 mSG Data</font></td></tr>
 <tr>
 <td align="right" valign="top">DAT</td>
@@ -5791,7 +5938,7 @@ mSG Data</font></td></tr>
 <tr>
 <td><font face="courier">C3 AB CD AB</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Ã«Í«</font></td></tr>
+<td><font face="courier">&#xC3;&#xAB;&#xCD;&#xAB;</font></td></tr>
 <tr>
 <td align="right" valign="top">ACS</td>
 <td>&nbsp;</td>
@@ -5801,7 +5948,7 @@ mSG Data</font></td></tr>
 <tr>
 <td><font face="courier">C5 D0 D3 C6</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÅÐÓÆ</font></td></tr>
+<td><font face="courier">&#xC5;&#xD0;&#xD3;&#xC6;</font></td></tr>
 <tr>
 <td align="right" valign="top">EPS</td>
 <td>&nbsp;</td>
@@ -5811,7 +5958,7 @@ mSG Data</font></td></tr>
 <tr>
 <td><font face="courier">C8 00 79 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">È.y.</font></td></tr>
+<td><font face="courier">&#xC8;.y.</font></td></tr>
 <tr>
 <td align="right" valign="top">LBK</td>
 <td>&nbsp;</td>
@@ -5821,7 +5968,7 @@ mSG Data</font></td></tr>
 <tr>
 <td><font face="courier">CA FE BA BE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Êþº¾</font></td></tr>
+<td><font face="courier">&#xCA;&#xFE;&#xBA;&#xBE;</font></td></tr>
 <tr>
 <td align="right" valign="top">CLASS</td>
 <td>&nbsp;</td>
@@ -5832,8 +5979,8 @@ mSG Data</font></td></tr>
 <td><font face="courier">CC 52 33 FC E9 2C 18 48<br>
 AF E3 36 30 1A 39 40 06</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÌR3üé,.H<br>
-¯ã60.9@.</font></td></tr>
+<td><font face="courier">&#xCC;R3&#xFC;&#xE9;,.H<br>
+&#xAF;&#xE3;60.9@.</font></td></tr>
 <tr>
 <td align="right" valign="top">NBU</td>
 <td>&nbsp;</td>
@@ -5843,7 +5990,7 @@ AF E3 36 30 1A 39 40 06</font></td>
 <tr>
 <td><font face="courier">CD 20 AA AA 02 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Í ªª....</font></td></tr>
+<td><font face="courier">&#xCD; &#xAA;&#xAA;....</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -5853,7 +6000,7 @@ AF E3 36 30 1A 39 40 06</font></td>
 <tr>
 <td><font face="courier">CE 24 B9 A2 20 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Î$¹¢ ...</font></td></tr>
+<td><font face="courier">&#xCE;$&#xB9;&#xA2; ...</font></td></tr>
 <tr>
 <td align="right" valign="top">TIB</td>
 <td>&nbsp;</td>
@@ -5863,28 +6010,28 @@ AF E3 36 30 1A 39 40 06</font></td>
 <tr>
 <td><font face="courier">CE CE CE CE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÎÎÎÎ</font></td></tr>
+<td><font face="courier">&#xCE;&#xCE;&#xCE;&#xCE;</font></td></tr>
 <tr>
 <td align="right" valign="top">JCEKS</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://zgrepcode.com/java/openjdk/10.0.2/java.base/com/sun/crypto/provider/jcekeystore.java" target="_blank">Java Cryptography Extension keystore</a> file<br><br></td>
+<td><a href="https://zgrepcode.com/java/openjdk/10.0.2/java.base/com/sun/crypto/provider/jcekeystore.java" target="_blank">Java Cryptography Extension keystore</a> file<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">CE FA ED FE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Îúíþ</font></td></tr>
+<td><font face="courier">&#xCE;&#xFA;&#xED;&#xFE;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Apple <a href="https://web.archive.org/web/20231117005052/https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file (32-bit, where target system has reverse byte<br>
+<td>Apple <a href="https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file</a> (32-bit, where target system has reverse byte<br>
 ordering from host running compiler)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">CF 11 E0 A1 B1 1A E1 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Ï.à¡±.á.</font></td></tr>
+<td><font face="courier">&#xCF;.&#xE0;&#xA1;&#xB1;.&#xE1;.</font></td></tr>
 <tr>
 <td align="right" valign="top">DOC</td>
 <td>&nbsp;</td>
@@ -5895,7 +6042,7 @@ ordering from host running compiler)<br><br></td>
 <tr>
 <td><font face="courier">CF AD 12 FE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Ï­.þ</font></td></tr>
+<td><font face="courier">&#xCF;&#xAD;.&#xFE;</font></td></tr>
 <tr>
 <td align="right" valign="top">DBX</td>
 <td>&nbsp;</td>
@@ -5905,25 +6052,25 @@ ordering from host running compiler)<br><br></td>
 <tr>
 <td><font face="courier">CF FA ED FE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Ïúíþ</font></td></tr>
+<td><font face="courier">&#xCF;&#xFA;&#xED;&#xFE;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Apple <a href="https://web.archive.org/web/20231117005052/https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file (64-bit, where target system has reverse byte<br>
+<td>Apple <a href="https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file</a> (64-bit, where target system has reverse byte<br>
 ordering from host running compiler)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">D0 CF 11 E0 A1 B1 1A E1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÐÏ.à¡±.á</font></td></tr>
+<td><font face="courier">&#xD0;&#xCF;.&#xE0;&#xA1;&#xB1;.&#xE1;</font></td></tr>
 <tr>
 <td align="right" valign="top">DOC, DOT, PPS, PPT, XLA, XLS, WIZ</td>
 <td>&nbsp;</td>
-<td>An Object Linking and Embedding (OLE) Compound File (CF) (i.e., <a href="https://web.archive.org/web/20231117005052/https://github.com/libyal/libolecf/blob/main/documentation/OLE%20Compound%20File%20format.asciidoc" target="_blank">OLECF</a>)<br>
+<td>An Object Linking and Embedding (OLE) Compound File (CF) (i.e., <a href="https://github.com/libyal/libolecf/blob/main/documentation/OLE%20Compound%20File%20format.asciidoc" target="_blank">OLECF</a>)<br>
 file format, known as <i>Compound Binary File format</i> by Microsoft, used by<br>
 Microsoft Office 97-2003 applications (Word, Powerpoint, Excel, Wizard). Part of<br>
-Microsoft's <a href="https://web.archive.org/web/20231117005052/https://docs.microsoft.com/en-us/windows/win32/stg/structured-storage-start-page" target="_blank"> Structured Storage (MSS)</a> architecture for Component Object Model (COM)-based<br>
+Microsoft's <a href="https://docs.microsoft.com/en-us/windows/win32/stg/structured-storage-start-page" target="_blank"> Structured Storage (MSS)</a> architecture for Component Object Model (COM)-based<br>
 operating systems.<br>
 [See also Excel, Outlook, PowerPoint, and Word "subheaders" at byte offset 512 (0x200).]<br>
 <ul>
@@ -6026,19 +6173,19 @@ operating systems.<br>
 </tr>
 
 <tr>
-<td><font face="courier">D2 0A 00 00</font></td>
-<td>&nbsp;</td>
-<td><font face="courier">Ò...</font></td></tr>
+<td><font face="courier">D2 0A 00 00</font></td></td>
+<td>&nbsp;</td></td>
+<td><font face="courier">&#xD2;...</font></td></tr>
 <tr>
-<td align="right" valign="top">FTR</td>
-<td>&nbsp;</td>
+<td align="right" valign="top">FTR</td></td>
+<td>&nbsp;</td></td>
 <td>GN Nettest WinPharoah filter file<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">D4 2A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Ô*</font></td></tr>
+<td><font face="courier">&#xD4;*</font></td></tr>
 <tr>
 <td align="right" valign="top">ARL, AUT</td>
 <td>&nbsp;</td>
@@ -6048,7 +6195,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">D4 C3 B2 A1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÔÃ²¡</font></td></tr>
+<td><font face="courier">&#xD4;&#xC3;&#xB2;&#xA1;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -6058,7 +6205,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">D7 CD C6 9A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">×ÍÆš</font></td></tr>
+<td><font face="courier">&#xD7;&#xCD;&#xC6;&#x9A;</font></td></tr>
 <tr>
 <td align="right" valign="top">WMF</td>
 <td>&nbsp;</td>
@@ -6068,7 +6215,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">DB A5 2D 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Û¥-.</font></td></tr>
+<td><font face="courier">&#xDB;&#xA5;-.</font></td></tr>
 <tr>
 <td align="right" valign="top">DOC</td>
 <td>&nbsp;</td>
@@ -6078,7 +6225,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">DC DC</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÜÜ</font></td></tr>
+<td><font face="courier">&#xDC;&#xDC;</font></td></tr>
 <tr>
 <td align="right" valign="top">CPL</td>
 <td>&nbsp;</td>
@@ -6088,7 +6235,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">DC FE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">Üþ</font></td></tr>
+<td><font face="courier">&#xDC;&#xFE;</font></td></tr>
 <tr>
 <td align="right" valign="top">EFX</td>
 <td>&nbsp;</td>
@@ -6098,7 +6245,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">E3 10 00 01 00 00 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ã.......</font></td></tr>
+<td><font face="courier">&#xE3;.......</font></td></tr>
 <tr>
 <td align="right" valign="top">INFO</td>
 <td>&nbsp;</td>
@@ -6108,7 +6255,7 @@ operating systems.<br>
 <tr>
 <td><font face="courier">E3 82 85 96</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ã‚…–</font></td></tr>
+<td><font face="courier">&#xE3;&#x82;&#x85;&#x96;</font></td></tr>
 <tr>
 <td align="right" valign="top">PWL</td>
 <td>&nbsp;</td>
@@ -6119,8 +6266,8 @@ operating systems.<br>
 <td><font face="courier">E4 52 5C 7B 8C D8 A7 4D<br>
 AE B1 53 78 D0 29 96 D3</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">äR\{ŒØ§M<br>
-®±SxÐ)–Ó</font></td></tr>
+<td><font face="courier">&#xE4;R\{&#x8C;&#xD8;&#xA7;M<br>
+&#xAE;&#xB1;Sx&#xD0;)&#x96;&#xD3;</font></td></tr>
 <tr>
 <td align="right" valign="top">ONE</td>
 <td>&nbsp;</td>
@@ -6130,15 +6277,15 @@ AE B1 53 78 D0 29 96 D3</font></td>
 <tr>
 <td><font face="courier">E8</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">è</font></td></tr>
+<td><font face="courier">&#xE8;</font></td></tr>
 <tr>
 <td><font face="courier">E9</font> <b><i>or</i></b></td>
 <td>&nbsp;</td>
-<td><font face="courier">é</font></td></tr>
+<td><font face="courier">&#xE9;</font></td></tr>
 <tr>
 <td><font face="courier">EB</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ë</font></td></tr>
+<td><font face="courier">&#xEB;</font></td></tr>
 <tr>
 <td align="right" valign="top">COM, SYS</td>
 <td>&nbsp;</td>
@@ -6148,7 +6295,7 @@ AE B1 53 78 D0 29 96 D3</font></td>
 <tr>
 <td><font face="courier">EB 3C 90 2A</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ë&lt;.*</font></td></tr>
+<td><font face="courier">&#xEB;&lt;.*</font></td></tr>
 <tr>
 <td align="right" valign="top">IMG</td>
 <td>&nbsp;</td>
@@ -6159,7 +6306,7 @@ AE B1 53 78 D0 29 96 D3</font></td>
 <td><font face="courier">EB 52 90 2D 46 56 45 2D<br>
 46 53 2D</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ëR.-FVE-<br>
+<td><font face="courier">&#xEB;R.-FVE-<br>
 FS-</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
@@ -6171,7 +6318,7 @@ FS-</font></td></tr>
 <td><font face="courier">EB 58 90 2D 46 56 45 2D<br>
 46 53 2D</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ëX.-FVE-<br>
+<td><font face="courier">&#xEB;X.-FVE-<br>
 FS-</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
@@ -6184,7 +6331,7 @@ FS-</font></td></tr>
 EC A5 C1 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ì¥Á.</font></td></tr>
+&#xEC;&#xA5;&#xC1;.</font></td></tr>
 <tr>
 <td align="right" valign="top">DOC</td>
 <td>&nbsp;</td>
@@ -6194,7 +6341,7 @@ EC A5 C1 00</font></td>
 <tr>
 <td><font face="courier">ED AB EE DB</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">í«îÛ</font></td></tr>
+<td><font face="courier">&#xED;&#xAB;&#xEE;&#xDB;</font></td></tr>
 <tr>
 <td align="right" valign="top">RPM</td>
 <td>&nbsp;</td>
@@ -6204,19 +6351,19 @@ EC A5 C1 00</font></td>
 <tr>
 <td><font face="courier">EF BB BF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ï»¿</font></td></tr>
+<td><font face="courier">&#xEF;&#xBB;&#xBF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>Byte-order mark (BOM) for 8-bit Unicode Transformation Format<br>
 (UTF-8) files.<br>
-(See the <a href="https://web.archive.org/web/20231117005052/http://www.unicode.org/" target="_blank">Unicode Home Page</a>.)<br><br></td>
+(See the <a href="http://www.unicode.org" target="_blank">Unicode Home Page</a>.)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">EF BB BF 3C</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ï»¿&lt;</font></td></tr>
+<td><font face="courier">&#xEF;&#xBB;&#xBF;&lt;</font></td></tr>
 <tr>
 <td align="right" valign="top">WSF</td>
 <td>&nbsp;</td>
@@ -6226,7 +6373,7 @@ EC A5 C1 00</font></td>
 <tr>
 <td><font face="courier">EF BB BF 3C 3F</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ï»¿&lt;?</font></td></tr>
+<td><font face="courier">&#xEF;&#xBB;&#xBF;&lt;?</font></td></tr>
 <tr>
 <td align="right" valign="top">WSC</td>
 <td>&nbsp;</td>
@@ -6237,7 +6384,7 @@ EC A5 C1 00</font></td>
 <td><font face="courier">EF BB BF 3C 3F 78 6D 6C<br>
 20 76 65 72 73 69 6F 6E</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ï»¿&lt;?xml<br>
+<td><font face="courier">&#xEF;&#xBB;&#xBF;&lt;?xml<br>
 &nbsp;version</font></td></tr>
 <tr>
 <td align="right" valign="top">YTT</td>
@@ -6250,7 +6397,7 @@ EC A5 C1 00</font></td>
 F0 FF FF</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[At a cluster boundary]<br>
-ðÿÿ</font></td></tr>
+&#xF0;&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -6262,7 +6409,7 @@ F0 FF FF</font></td>
 F8 FF FF FF</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[At a cluster boundary]<br>
-øÿÿÿ</font></td></tr>
+&#xF8;&#xFF;&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -6274,7 +6421,7 @@ F8 FF FF FF</font></td>
 F8 FF FF 0F FF FF FF 0F</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[At a cluster boundary]<br>
-øÿÿ.ÿÿÿ.</font></td></tr>
+&#xF8;&#xFF;&#xFF;.&#xFF;&#xFF;&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -6286,7 +6433,7 @@ F8 FF FF 0F FF FF FF 0F</font></td>
 F8 FF FF 0F FF FF FF FF</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[At a cluster boundary]<br>
-øÿÿ.ÿÿÿÿ</font></td></tr>
+&#xF8;&#xFF;&#xFF;.&#xFF;&#xFF;&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
@@ -6296,7 +6443,7 @@ F8 FF FF 0F FF FF FF FF</font></td>
 <tr>
 <td><font face="courier">F9 BE B4 D9</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ù¾´Ù</font></td></tr>
+<td><font face="courier">&#xF9;&#xBE;&#xB4;&#xD9</font></td></tr>
 <tr>
 <td align="right" valign="top">DAT</td>
 <td>&nbsp;</td>
@@ -6304,9 +6451,20 @@ F8 FF FF 0F FF FF FF FF</font></td>
 </tr>
 
 <tr>
+<td><font face="courier">FA</font></td>
+<td>&nbsp;</td>
+<td><font face="courier">&#xFA;<br>
+ </font></td></tr>
+<tr>
+<td align="right" valign="top">DCM</td>
+<td>&nbsp;</td>
+<td>Atari Compressed Disk Communicator image<br><br></td>
+</tr>
+
+<tr>
 <td><font face="courier">FD 37 7A 58 5A 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ý7zXZ.<br>
+<td><font face="courier">&#xFD;7zXZ.<br>
  </font></td></tr>
 <tr>
 <td align="right" valign="top">XZ</td>
@@ -6319,7 +6477,7 @@ F8 FF FF 0F FF FF FF FF</font></td>
 FD FF FF FF 02</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ.</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">PUB</td>
 <td>&nbsp;</td>
@@ -6331,7 +6489,7 @@ FD FF FF FF 02</font></td>
 FD FF FF FF 04</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ.</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">MSG</td>
 <td>&nbsp;</td>
@@ -6353,7 +6511,7 @@ FD FF FF FF 04</font></td>
 FD FF FF FF nn nn 00 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ....</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF;....</font></td></tr>
 <tr>
 <td align="right" valign="top">PPT</td>
 <td>&nbsp;</td>
@@ -6365,14 +6523,14 @@ FD FF FF FF nn nn 00 00</font></td>
 FD FF FF FF nn 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ..</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF;..</font></td></tr>
 <tr><td><b><i>or</i></b></td></tr>
 <tr>
 <td><font face="courier">[512 (0x200) byte offset]<br>
 FD FF FF FF nn 02</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ..</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF;..</font></td></tr>
 <tr>
 <td align="right" valign="top">XLS</td>
 <td>&nbsp;</td>
@@ -6384,12 +6542,12 @@ FD FF FF FF nn 02</font></td>
 FD FF FF FF 20 00 00 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ ...</font></td></tr>
+&#xFD;&#xFF;&#xFF;&#xFF; ...</font></td></tr>
 <tr>
 <td align="right" valign="top">OPT</td>
 <td>&nbsp;</td>
 <td>Developer Studio File Workspace Options subheader (MS Office)</td>
-</tr><tr>
+<tr>
 <td align="right" valign="top">XLS</td>
 <td>&nbsp;</td>
 <td>Excel spreadsheet subheader (MS Office)<br><br></td>
@@ -6401,7 +6559,7 @@ FD FF FF FF xx xx xx xx<br>
 xx xx xx xx 04 00 00 00</font></td>
 <td>&nbsp;</td>
 <td><font face="courier">[512 (0x200) byte offset]<br>
-ýÿÿÿ....<br>
+&#xFD;&#xFF;&#xFF;&#xFF;....<br>
 ........</font></td></tr>
 <tr>
 <td align="right" valign="top">DB</td>
@@ -6412,37 +6570,37 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FE ED FA CE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">þíúÎ</font></td></tr>
+<td><font face="courier">&#xFE;&#xED;&#xFA;&#xCE;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Apple <a href="https://web.archive.org/web/20231117005052/https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file (32-bit)<br><br></td>
+<td>Apple <a href="https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file</a> (32-bit)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FE ED FA CF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">þíúÏ</font></td></tr>
+<td><font face="courier">&#xFE;&#xED;&#xFA;&#xCF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
-<td>Apple <a href="https://web.archive.org/web/20231117005052/https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file (64-bit)<br><br></td>
+<td>Apple <a href="https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf" target="_blank">OS X ABI Mach-O</a> binary file</a> (64-bit)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FE ED FE ED</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">þíþí</font></td></tr>
+<td><font face="courier">&#xFE;&#xED;&#xFE;&#xED;</font></td></tr>
 <tr>
 <td align="right" valign="top">JKS</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://zgrepcode.com/java/openjdk/10.0.2/java.base/sun/security/provider/javakeystore.java" target="_blank">JavaKeyStore file</a><br><br></td>
+<td><a href="https://zgrepcode.com/java/openjdk/10.0.2/java.base/sun/security/provider/javakeystore.java" target="_blank">JavaKeyStore file</a><br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FE EF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">þï</font></td></tr>
+<td><font face="courier">&#xFE;&#xEF;</font></td></tr>
 <tr>
 <td align="right" valign="top">GHO, GHS</td>
 <td>&nbsp;</td>
@@ -6452,19 +6610,19 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FE FF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">þÿ</font></td></tr>
+<td><font face="courier">&#xFE;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>Byte-order mark (BOM) for 16-bit Unicode Transformation Format/<br>
 2-octet Universal Character Set (UTF-16/UCS-2), big-endian files.<br>
-(See the <a href="https://web.archive.org/web/20231117005052/http://www.unicode.org/" target="_blank">Unicode Home Page</a>.)<br><br></td>
+(See the <a href="http://www.unicode.org" target="_blank">Unicode Home Page</a>.)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿ</font></td></tr>
+<td><font face="courier">&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">SYS</td>
 <td>&nbsp;</td>
@@ -6475,7 +6633,7 @@ xx xx xx xx 04 00 00 00</font></td>
 <td><font face="courier">FF 00 02 00 04 04 05 54<br>
 02 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿ......T<br>
+<td><font face="courier">&#xFF;......T<br>
 ..</font></td></tr>
 <tr>
 <td align="right" valign="top">WKS</td>
@@ -6486,7 +6644,7 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FF 0A 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿ..</font></td></tr>
+<td><font face="courier">&#xFF;..</font></td></tr>
 <tr>
 <td align="right" valign="top">QRP</td>
 <td>&nbsp;</td>
@@ -6496,7 +6654,7 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FF 46 4F 4E 54</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿFONT</font></td></tr>
+<td><font face="courier">&#xFF;FONT</font></td></tr>
 <tr>
 <td align="right" valign="top">CPI</td>
 <td>&nbsp;</td>
@@ -6506,7 +6664,7 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FF 4B 45 59 42 20 20 20</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿKEYB   </font></td></tr>
+<td><font face="courier">&#xFF;KEYB   </font></td></tr>
 <tr>
 <td align="right" valign="top">SYS</td>
 <td>&nbsp;</td>
@@ -6516,7 +6674,7 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FF 57 50 43</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿWPC</font></td></tr>
+<td><font face="courier">&#xFF;WPC</font></td></tr>
 <tr>
 <td align="right" valign="top">WP, WPD, WPG, WPP, WP5, WP6</td>
 <td>&nbsp;</td>
@@ -6526,16 +6684,16 @@ xx xx xx xx 04 00 00 00</font></td>
 <tr>
 <td><font face="courier">FF D8</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿØ</font></td></tr>
+<td><font face="courier">&#xFF;&#xD8</font></td></tr>
 <tr>
 <td align="right" valign="top">JPE, JPEG, JPG</td>
 <td>&nbsp;</td>
-<td>Generic JPEG Image file<br>
-<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">ÿÙ</font>)<br><br></td>
+<td>Generic JPEG Image file</a><br>
+<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">&#xFF;&#xD9;</font>)<br><br></td>
 </tr>
 
 <tr>
-<td colspan="5">
+<td colspan=5>
 <blockquote>
 <b>NOTES on JPEG file headers:</b> The proper JPEG header is the two-byte sequence, 0xFF-D8, aka <i>Start of Image (SOI)</i> marker.<br>
 JPEG files end with the two-byte sequence, 0xFF-D9, aka <i>End of Image (EOI)</i> marker.<br><br>
@@ -6548,12 +6706,12 @@ tags are shown below:<br><br>
 
 <ul>
 <!--<li>0xFF-D8-FF-DB &#151; Samsung D807 JPEG file</a>.</li>-->
-<li>0xFF-D8-FF-E0 — <a href="https://web.archive.org/web/20231117005052/http://www.faqs.org/faqs/jpeg-faq/part1/section-15.html" target="_blank"> Standard JPEG/JFIF file</a>, as shown below.</li>
-<li>0xFF-D8-FF-E1 — Standard JPEG file with Exif metadata, as shown below.</li>
-<li>0xFF-D8-FF-E2 — Canon Camera Image File Format (CIFF) JPEG file (formerly used by some EOS and Powershot cameras).</li>
+<li>0xFF-D8-FF-E0 &#151; <a href="http://www.faqs.org/faqs/jpeg-faq/part1/section-15.html" target="_blank"> Standard JPEG/JFIF file</a>, as shown below.</li>
+<li>0xFF-D8-FF-E1 &#151; Standard JPEG file with Exif metadata, as shown below.</li>
+<li>0xFF-D8-FF-E2 &#151; Canon Camera Image File Format (CIFF) JPEG file (formerly used by some EOS and Powershot cameras).</li>
 <!--<li>0xFF-D8-FF-E3 &#151; Samsung D500 JPEG file</li>-->
 
-<li>0xFF-D8-FF-E8 — <a href="https://web.archive.org/web/20231117005052/http://www.digitalpreservation.gov/formats/fdd/fdd000019.shtml" target="_blank"> Still Picture Interchange File Format (SPIFF)</a>, as shown below.</li>
+<li>0xFF-D8-FF-E8 &#151; <a href="http://www.digitalpreservation.gov/formats/fdd/fdd000019.shtml" target="_blank"> Still Picture Interchange File Format (SPIFF)</a>, as shown below.</li>
 </ul>
 </blockquote>
 </td></tr>
@@ -6562,29 +6720,29 @@ tags are shown below:<br><br>
 <td><font face="courier">FF D8 FF E0 xx xx 4A 46<br>
 49 46 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿØÿà..JF<br>
+<td><font face="courier">&#xFF;&#xD8;&#xFF;&#xE0;..JF<br>
 IF.</font></td></tr>
 <tr>
 <td align="right" valign="top">JFIF, JPE, JPEG, JPG</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/https://jpeg.org/jpeg/workplan.html" target="_blank">JPEG/JFIF graphics file</a><br>
-<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">ÿÙ</font>)<br><br></td>
+<td><a href="https://jpeg.org/jpeg/workplan.html" target="_blank">JPEG/JFIF graphics file</a><br>
+<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">&#xFF;&#xD9;</font>)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FF D8 FF E1 xx xx 45 78<br>
 69 66 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿØÿá..Ex<br>
+<td><font face="courier">&#xFF;&#xD8;&#xFF;&#xE1;..Ex<br>
 if.</font></td></tr>
 <tr>
 <td align="right" valign="top">JPG</td>
 <td>&nbsp;</td>
-<td>Digital camera JPG using <a href="https://web.archive.org/web/20231117005052/http://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf" target="_blank"> Exchangeable Image File Format (EXIF)</a><br>
-<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">ÿÙ</font>)<br>
-<font size="-1">See <a href="https://web.archive.org/web/20231117005052/http://www.utica.edu/academic/institutes/ecii/publications/articles/A0B1F944-FF4E-4788-E75541A7418DAE24.pdf" target="_blank">"Using Extended File Information (EXIF) File Headers in Digital<br>
+<td>Digital camera JPG using <a href="http://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf" target="_blank"> Exchangeable Image File Format (EXIF)</a><br>
+<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">&#xFF;&#xD9;</font>)<br>
+<font size="-1">See <a href="http://www.utica.edu/academic/institutes/ecii/publications/articles/A0B1F944-FF4E-4788-E75541A7418DAE24.pdf" target="_blank">"Using Extended File Information (EXIF) File Headers in Digital<br>
 Evidence Analysis"</a> (P. Alvarez, <i>IJDE</i>, <i>2</i>(3), Winter 2004) and<br>
-<a href="https://web.archive.org/web/20231117005052/http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/index.html" target="_blank"> ExifTool Tag Names</a></font><br><br>
+<a href="http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/index.html" target="_blank"> ExifTool Tag Names</a></font><br><br>
 </td>
 </tr>
 
@@ -6592,34 +6750,34 @@ Evidence Analysis"</a> (P. Alvarez, <i>IJDE</i>, <i>2</i>(3), Winter 2004) and<b
 <td><font face="courier">FF D8 FF E8 xx xx 53 50<br>
 49 46 46 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿØÿè..SP<br>
+<td><font face="courier">&#xFF;&#xD8;&#xFF;&#xE8;..SP<br>
 IFF.</font></td></tr>
 <tr>
 <td align="right" valign="top">JPG</td>
 <td>&nbsp;</td>
-<td><a href="https://web.archive.org/web/20231117005052/http://www.fileformat.info/format/spiff/index.dir" target="_blank"> Still Picture Interchange File Format (SPIFF)</a><br>
-<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">ÿÙ</font>)<br><br>
+<td><a href="http://www.fileformat.info/format/spiff/index.dir" target="_blank"> Still Picture Interchange File Format (SPIFF)</a><br>
+<b>Trailer:</b> <font face="courier">FF D9</font> (<font face="courier">&#xFF;&#xD9;</font>)<br><br>
 </td>
 </tr>
 
 <tr>
 <td><font face="courier">FF Ex</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿ.</font></td></tr>
+<td><font face="courier">&#xFF;.</font></td></tr>
 <tr>
 <td><font face="courier">FF Fx</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿ.</font></td></tr>
+<td><font face="courier">&#xFF;.</font></td></tr>
 <tr>
 <td align="right" valign="top">MPEG, MPG, MP3</td>
 <td>&nbsp;</td>
-<td>MPEG audio file frame <a href="https://web.archive.org/web/20231117005052/http://www.mp3-tech.org/programmer/frame_header.html" target="_blank"> synch pattern</a><br><br></td>
+<td>MPEG audio file frame <a href="http://www.mp3-tech.org/programmer/frame_header.html" target="_blank"> synch pattern</a><br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FF F1</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿñ</font></td></tr>
+<td><font face="courier">&#xFF;&#xF1;</font></td></tr>
 <tr>
 <td align="right" valign="top">AAC</td>
 <td>&nbsp;</td>
@@ -6629,7 +6787,7 @@ IFF.</font></td></tr>
 <tr>
 <td><font face="courier">FF F9</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿù</font></td></tr>
+<td><font face="courier">&#xFF;&#xF9;</font></td></tr>
 <tr>
 <td align="right" valign="top">AAC</td>
 <td>&nbsp;</td>
@@ -6640,7 +6798,7 @@ IFF.</font></td></tr>
 <tr>
 <td><font face="courier">FF FE</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿþ</font></td></tr>
+<td><font face="courier">&#xFF;&#xFE;</font></td></tr>
 <tr>
 <td align="right" valign="top">REG</td>
 <td>&nbsp;</td>
@@ -6651,26 +6809,26 @@ IFF.</font></td></tr>
 <td>&nbsp;</td>
 <td>Byte-order mark (BOM) for 16-bit Unicode Transformation Format/<br>
 2-octet Universal Character Set (UTF-16/UCS-2), little-endian files.<br>
-(See the <a href="https://web.archive.org/web/20231117005052/http://www.unicode.org/" target="_blank">Unicode Home Page</a>.)<br><br></td>
+(See the <a href="http://www.unicode.org" target="_blank">Unicode Home Page</a>.)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FF FE 00 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿþ..</font></td></tr>
+<td><font face="courier">&#xFF;&#xFE;..</font></td></tr>
 <tr>
 <td align="right" valign="top">n/a</td>
 <td>&nbsp;</td>
 <td>Byte-order mark for 32-bit Unicode Transformation Format/<br>
 4-octet Universal Character Set (UTF-32/UCS-4), little-endian files.<br>
-(See the <a href="https://web.archive.org/web/20231117005052/http://www.unicode.org/" target="_blank">Unicode Home Page</a>.)<br><br></td>
+(See the <a href="http://www.unicode.org" target="_blank">Unicode Home Page</a>.)<br><br></td>
 </tr>
 
 <tr>
 <td><font face="courier">FF FE 23 00 6C 00 69 00<br>
 6E 00 65 00 20 00 31 00</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿþ#.l.i.<br>
+<td><font face="courier">&#xFF;&#xFE;#.l.i.<br>
 n.e. .1.</font></td></tr>
 <tr>
 <td align="right" valign="top">MOF</td>
@@ -6681,13 +6839,13 @@ n.e. .1.</font></td></tr>
 <tr>
 <td><font face="courier">FF FF FF FF</font></td>
 <td>&nbsp;</td>
-<td><font face="courier">ÿÿÿÿ</font></td></tr>
+<td><font face="courier">&#xFF;&#xFF;&#xFF;&#xFF;</font></td></tr>
 <tr>
 <td align="right" valign="top">SYS</td>
 <td>&nbsp;</td>
 <td>DOS system driver<br><br></td>
 </tr>
-</tbody></table>
+</table>
 
 <hr>
 <p id="acks"></p>
@@ -6695,21 +6853,19 @@ n.e. .1.</font></td></tr>
 <font size="-1">
 <p align="center">ACKNOWLEDGEMENTS</p>
 <p>
-The following individuals have given me updates or suggestions for this list over the years: Devon Ackerman, Nazim Aliyev, Justin Almanza, Marco Barbieri, Vladimir Benko, Arvin Bhatnagar, Jim Blackson, Keith Blackwell, Alex Boschma, Sam Brothers, David Burton, Alex Caithness, Erik Campeau, Björn Carlin, Tim Carver, Michael D Cavalier, Per Christensson, Oscar Choi, JMJ.Conseil, Jesse Cooper, Jesse Corwin, Mike Daniels, David DeBrota, Cornelis de Groot, Jeffrey Duggan, Tony Duncan, Jon Eldridge, Ehsan Elhampour, Jean-Pierre Fiset, Peter Almer Frederiksen, Tim Gardner, Chris Griffith, Linda Grody, Andis Grosšteins, Paulo Guzmán, Rich Hanes, George Harpur, Brian High, Eric Huber, John Hughes, Allan Jensen, Broadus Jones, Matthew Kelly, Axel Kesseler, Nick Khor, Shane King, Art Kocsis, Thiemo Kreuz, Bill Kuhns, Evgenii Kustov, Andreas Kyrmegalos, Glenn Larsson, Jeremy Lloyd, Anand Mani, Kevin Mansell, Davyd McColl, Par Osterberg Medina, Michal, Sergey Miklin, David Millard, Bruce Modick, Lee Nelson, Mart Oskamp, Dan P., Jorge Paulhiac, Carlo Politi, Seth Polley, Hedley Quintana, Anthony Rabon, Stanley Rainey, Cory Redfern, Bruce Robertson, Ben Roeder, Thomas Rösner, Gerd, Röthig, Gaurav Sehgal, Andy Seitz, Anli Shundi, Erik Siers, Philip Smith, Mike Sutton, Matthias Sweertvaegher, Tobiasz Światlowski, Frank Thornton, Erik van de Burgwal, Øyvind Walding, Jason Wallace, Daniel Walton, Franklin Webber, Bernd Wechner, Douglas White, Mike Wilkinson, Gavin Williams, Sean Wolfinger, David Wright, Yuna, and Shaul Zevin. I thank them and apologize if I have missed anyone.</p>
+The following individuals have given me updates or suggestions for this list over the years: Devon Ackerman, Ansh Aggarwal, Nazim Aliyev, Justin Almanza, Marco Barbieri, Vladimir Benko, Arvin Bhatnagar, Jim Blackson, Keith Blackwell, Alex Boschma, Sam Brothers, David Burton, Alex Caithness, Erik Campeau, Bj&ouml;rn Carlin, Tim Carver, Michael D Cavalier, Per Christensson, Oscar Choi, JMJ.Conseil, Jesse Cooper, Jesse Corwin, Mike Daniels, David DeBrota, Cornelis de Groot, Jeffrey Duggan, Tony Duncan, Jon Eldridge, Ehsan Elhampour, Jean-Pierre Fiset, Peter Almer Frederiksen, Tim Gardner, Mark Gonyea, Chris Griffith, Linda Grody, Andis Gros&#353;teins, Paulo Guzm&aacute;n, Rich Hanes, George Harpur, Brian High, Eric Huber, Alexander H&uuml;bert, John Hughes, Allan Jensen, Eric Jollymore, Broadus Jones, Matthew Kelly, Axel Kesseler, Nick Khor, Shane King, Art Kocsis, Thiemo Kreuz, Bill Kuhns, Evgenii Kustov, Andreas Kyrmegalos, Glenn Larsson, Jeremy Lloyd, Anand Mani, Kevin Mansell, Nevena Markovi&cacute;, Davyd McColl, Par Osterberg Medina, Michal, Sergey Miklin, David Millard, Bruce Modick, Lee Nelson, Mart Oskamp, Dan P., Jorge Paulhiac, Carlo Politi, Seth Polley, Hedley Quintana, Anthony Rabon, Stanley Rainey, Cory Redfern, Bruce Robertson, Ben Roeder, Thomas R&ouml;sner, Gerd, R&ouml;thig, Gaurav Sehgal, Andy Seitz, Anli Shundi, Erik Siers, Philip Smith, Mike Sutton, Matthias Sweertvaegher, Tobiasz &Sacute;wiatlowski, Frank Thornton, Erik van de Burgwal, &Oslash;yvind Walding, Jason Wallace, Daniel Walton, Franklin Webber, Bernd Wechner, Douglas White, Mike Wilkinson, Gavin Williams, Sean Wolfinger, David Wright, Yuna, and Shaul Zevin. I thank them and apologize if I have missed anyone.</p>
 <p>
-I would like to give particular thanks to Danny Mares of <a href="https://web.archive.org/web/20231117005052/http://www.maresware.com/" target="_blank">Mares and Company</a>, author of the <a href="https://web.archive.org/web/20231117005052/http://www.maresware.com/maresware/software.htm" target="blank"> MaresWare Suite</a> (primarily for the "subheaders" for many of the file types here), and the people at <a href="https://web.archive.org/web/20231117005052/http://www.x-ways.net/" target="_blank"> X-Ways Forensics</a> for their permission to incorporate their lists of file signatures.</p>
+I would like to give particular thanks to Danny Mares of <a href="http://www.maresware.com/" target="_blank">Mares and Company</a>, author of the <a href="http://www.maresware.com/maresware/software.htm" target="blank"> MaresWare Suite</a> (primarily for the "subheaders" for many of the file types here), and the people at <a href="http://www.x-ways.net/" target="_blank"> X-Ways Forensics</a> for their permission to incorporate their lists of file signatures.</p>
 <p>
-Finally, Dr. Nicole Beebe from The University of Texas at San Antonio posted samples of more than 32 file types at the Digital Corpora, which I used for verification and additional signatures. These files were used to develop the <a href="https://web.archive.org/web/20231117005052/https://www.osdfcon.org/presentations/2014/Sceadan-OSDFCon2014.pdf" target="_blank"> Sceadan File Type Classifier</a>. The file samples can be downloaded from the <a href="https://web.archive.org/web/20231117005052/https://digitalcorpora.org/corpora/files" target="_blank"> Digital Corpora</a> website.</p>
+Finally, Dr. Nicole Beebe from The University of Texas at San Antonio posted samples of more than 32 file types at the Digital Corpora, which I used for verification and additional signatures. These files were used to develop the <a href="https://www.osdfcon.org/presentations/2014/Sceadan-OSDFCon2014.pdf" target="_blank"> Sceadan File Type Classifier</a>. The file samples can be downloaded from the <a href="https://digitalcorpora.org/corpora/files" target="_blank"> Digital Corpora</a> website.</p>
 
 <p align="center">COPYRIGHT NOTICE</p>
 <p>
-All information on this page © 2002-<script>document.write(new Date().getFullYear())</script>2023, Gary C. Kessler. Permission to use the material here is extended to any of this page's visitors, as long as appropriate attribution is provided and the information is not altered in any way without express written permission of the author.</p>
+All information on this page &copy; 2002-<script>document.write(new Date().getFullYear())</script>, Gary C. Kessler. Permission to use the material here is extended to any of this page's visitors, as long as appropriate attribution is provided and the information is not altered in any way without express written permission of the author.</p>
 </font>
 </blockquote>
 </blockquote>
 
 <br><br>
-
-
-
-</body></html>
+</body>
+</html>
