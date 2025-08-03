@@ -1,0 +1,19 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+:root {
+    --avatar-border-color: #2F203C !important;
+}
+
+#avatar {
+    border-radius: 25% !important;
+}
