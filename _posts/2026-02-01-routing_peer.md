@@ -9,7 +9,7 @@ tags: [homelab]
 
 Welcome! In this post I'll be explaining how to set up a NetBird routing peer for remote access to your homelab. I'll also be going though the challenges I faced trying to achieve high availability (HA) and why true HA didn't work out for me.
 
-This post assumes you have some experience with Proxmox and NetBird and have an instance set up already, plus know some basic networking concepts (routing and NATing). I’ll be walking through a minimal Alpine setup in Proxmox, accessing the box through the serial console, and then installing Netbird on it. I'll be setting the peer up as a routing peer with some basic ACLs and disabling NATing for traffic entering my lab network from the VPN. Feel free to follow along!
+This post assumes you have some experience with NetBird and have an instance set up already. I’ll be walking through a minimal Alpine setup in Proxmox, accessing the box through the serial console, and then installing Netbird on it. I'll be setting the peer up as a routing peer with a basic ACL and disabling NATing for traffic entering my lab network from the VPN, which includes setting up routing on my OPNSense device. Feel free to follow along!
 
 ## Background
 
@@ -125,13 +125,13 @@ To actually have peers access our resources, we'll also need to set up ACLs. Thi
 ![12.png](/assets/img/posts/routing_peer/12.png)
 The important part of this is having at least one device that can't access your resources without using the VPN so we can use it to test, and making sure this device is allowed through by NetBird's ACLs.
 
-Towards the bottom of the network settings should be an option to add a new routing peer which allows us to actually use the network.  
+Towards the bottom of the network settings should be an option to add a new routing peer which allows us to actually use the network by sending traffic from NetBird through this device.
 ![13.png](/assets/img/posts/routing_peer/13.png)  
-You can choose to add the peer individually, or you can choose to use a whole group as routing peers for the network. In this case, any new routing peer just needs to be added to the group. If you're following my setup and intend to disable NATing, you'll need to add peers individually.  
+You can choose to add the peer individually, or you can choose to use a whole group as routing peers for the network. In this case, any new routing peer just needs to be added to the group. If you're following my setup and intend to disable NATing (explained soon), you'll need to add peers individually.  
 ![14.png](/assets/img/posts/routing_peer/14.png)  
-After this we can configure advanced settings. The main important option here is 'Masquerade'. If you have a simple lab setup that only you use, it's fine to leave masquerade on, however if you are setting up NetBird for a business or a large lab with multiple users, I **highly** recommend disabling it. Take note of the 'Metric' setting too, because if you do choose to work without NAT like me, you'll need to adjust this later.
+After this we can configure advanced settings. The main important option here is 'Masquerade'. If you have a simple lab setup that only you use, it's fine to leave masquerade on, however if you're setting up NetBird for a business or a large lab with multiple users, I **highly** recommend disabling it. Take note of the 'Metric' setting too, because if you do choose to work without NAT, you'll need to adjust this later.
 
-Masquerade on a routing peer NATs traffic going into the target network, all traffic will appear to be from the routing peer's internal IP address for that network. This presents two main issues:
+Masquerade on a routing peer NATs traffic going into the target network, which means all traffic will appear to be from the routing peer's internal IP address for that network. This presents two main issues:
 
 - Logging
 - Firewall rules
