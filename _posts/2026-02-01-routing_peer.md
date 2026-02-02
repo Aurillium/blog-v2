@@ -27,7 +27,7 @@ Scroll down to where it says ‘virtual’ and select a version that matches you
 
 ![0.png](/assets/img/posts/routing_peer/0.png)
 
-Generally I prefer to download it directly to Proxmox so I don't have to download the image then re-upload it from my laptop, so I'll copy the direct link here. Navigate to 'local' under your Proxmox node and enter the ISO images menu  
+Navigate to 'local' under your Proxmox node and enter the ISO images menu. Generally I prefer to download my images directly to Proxmox so I don't have to download the image then re-upload it from my laptop, so I'll copy the direct link here.
 ![1.png](/assets/img/posts/routing_peer/1.png)
 
 Hashes are also available on the Alpine page if you'd like the verify the integrity of your image. The download should be quick as it's only about 70MB. After we've done this we can set up the VM.
@@ -46,22 +46,22 @@ While we don't necessarily need the QEMU guest agent, there's rarely harm in ena
 
 ### 3\. Alpine Install
 
-First we'll go through the initial setup for Alpine (as appropriate for your environment):  
-![2.png](/assets/img/posts/routing_peer/2.png)  
-This is mostly dependent on your preferences, but always choose a strong root password.  
-I generally just pick the fastest mirror, though this will take some time to work out. If you're on 3.23 or above, I'd recommend enabling community repositories here as you'll be able to install NetBird directly (unfortunately not an option when I started writing).  
-![3.png](/assets/img/posts/routing_peer/3.png)  
-I don't set up a user because we're just using this for NetBird and not running any other services. I can't log in externally so there would be very little security difference. If you intend to leave a console open for some time and are planning on doing a lot of work on the machine, you could set up a user for sudo, but I generally won't be touching this. I also don't set up SSH for the sake of reducing attack surface, the Proxmox serial console makes terminal usage easy.  
-![4.png](/assets/img/posts/routing_peer/4.png)  
-If you're unsure about partitioning, just choose 'sys'. This is essentially a standard install with the whole filesystem on one partition, if you're just using this as a routing peer there's no need to be too fancy.
+First we'll go through the initial setup for Alpine (as appropriate for your environment):
+![2.png](/assets/img/posts/routing_peer/2.png)
+This is mostly dependent on your preferences, but always choose a strong root password.
+I generally just pick the fastest mirror, though this will take some time to work out. If you're on 3.23 or above, I'd recommend enabling community repositories here as you'll be able to install NetBird directly (unfortunately not an option when I started writing).
+![3.png](/assets/img/posts/routing_peer/3.png)
+I don't set up a user because we're just using this for NetBird and not running any other services. I can't log in externally so there would be very little security difference. If you intend to leave a console open for some time and are planning on doing a lot of work on the machine, you could set up a user for sudo, but I generally won't be touching this. I also don't set up SSH for the sake of reducing attack surface, the Proxmox serial console makes terminal usage easy.
+![4.png](/assets/img/posts/routing_peer/4.png)
+If you're unsure about partitioning, just choose 'sys'. This is essentially a standard install with the whole filesystem on one partition; if you're just using this as a routing peer there's no need to be too fancy.
 
-This should be the last step to the installation, and you can now reboot into your system. Assuming you did choose the VM image for Alpine, the serial port should be working automatically and you can open the VM in Xterm.js mode:  
-![5.png](/assets/img/posts/routing_peer/5.png)  
+This should be the last step to the installation, and you can now reboot into your system. Assuming you did choose the VM image for Alpine, the serial port should be working automatically and you can open the VM in Xterm.js mode:
+![5.png](/assets/img/posts/routing_peer/5.png)
 This will be handy for copying and pasting when we set up NetBird.
 
 ### 4\. Installing NetBird
 
-There are two main ways to install NetBird on Alpine, if you're on 3.23 or above, NetBird is included in the community repository which makes installation simple by going through the package manager. This is likely your best option, but there is also an installation script if you need to use a lower version or have specific requirements that prevent you using the package manager.
+There are two main ways to install NetBird on Alpine. If you're on 3.23 or above, NetBird is included in the community repository which makes installation simple by going through the package manager. This is likely your best option, but there is also an installation script if you need to use a lower version or have specific requirements that prevent you using the package manager.
 
 #### Option 4.1: Package Manager (Post-3.23)
 
@@ -71,7 +71,7 @@ A quick `# apk add netbird` will do the trick here. This is definitely the best 
 
 The advantage of this approach is that you don't need to upgrade to 3.23 or higher, however you'll be installing without a package manager. This isn't usually my preference generally because I like to keep my installs organised, but since this is the only software we're installing it's quite viable.
 
-NetBird actually makes this approach quite straightforward with an install script.  
+NetBird actually makes this approach quite straightforward with an install script.
 The first step is to install `curl` to download the script, and `nano` (or your preferred editor) to read the script before running it (we do not condone `curl | sh` here!):
 
 ```sh
@@ -91,19 +91,19 @@ sh install-netbird.sh
 rm install-netbird.sh
 ```
 
-The script in `nano`:  
+The script in `nano`:
 ![6.png](/assets/img/posts/routing_peer/6.png)
 
 And we're done! We'll set it up in just a moment.
 
 ### 5\. Connecting to NetBird
 
-The first thing we'll do is navigate into NetBird and create a setup key. This means this peer won't be attached to a particular account, which works well in my setup. We can also prevent its session from expiring, meaning if it goes down it can automatically come back up without us having to give it a new key.  
-![7.png](/assets/img/posts/routing_peer/7.png)  
-Click the 'Create Setup Key' button and create your key. I recommend making this a one-time use and giving it a short expiry if you don't need to deploy new hosts en masse.  
+The first thing we'll do is navigate into NetBird and create a setup key. This means this peer won't be attached to a particular account, which works well in my setup. We can also prevent its session from expiring, meaning if it goes down it can automatically come back up without us having to give it a new key.
+![7.png](/assets/img/posts/routing_peer/7.png)
+Click the 'Create Setup Key' button and create your key. I recommend making this a one-time use and giving it a short expiry if you don't need to deploy new hosts en masse.
 ![8.png](/assets/img/posts/routing_peer/8.png)
 
-We can now run the command
+We can now run the command.
 
 ```sh
 $ netbird up --management-url <YOUR MANAGEMENT URL> --setup-key <YOUR SETUP KEY>
@@ -111,8 +111,8 @@ $ netbird up --management-url <YOUR MANAGEMENT URL> --setup-key <YOUR SETUP KEY>
 
 *\*Note that a management URL is not required if you're using a SaaS instance hosted by NetBird.*
 
-And we're connected!  
-![9.png](/assets/img/posts/routing_peer/9.png)  
+And we're connected!
+![9.png](/assets/img/posts/routing_peer/9.png)
 Once you've connected the host, make sure to delete the setup key if you're done with it.
 
 ### 6\. Setting up a Network
@@ -126,17 +126,17 @@ To actually have peers access our resources, we'll also need to set up ACLs. Thi
 The important part of this is having at least one device that can't access your resources without using the VPN so we can use it to test, and making sure this device is allowed through by NetBird's ACLs.
 
 Towards the bottom of the network settings should be an option to add a new routing peer which allows us to actually use the network by sending traffic from NetBird through this device.
-![13.png](/assets/img/posts/routing_peer/13.png)  
-You can choose to add the peer individually, or you can choose to use a whole group as routing peers for the network. In this case, any new routing peer just needs to be added to the group. If you're following my setup and intend to disable NATing (explained soon), you'll need to add peers individually.  
-![14.png](/assets/img/posts/routing_peer/14.png)  
-After this we can configure advanced settings. The main important option here is 'Masquerade'. If you have a simple lab setup that only you use, it's fine to leave masquerade on, however if you're setting up NetBird for a business or a large lab with multiple users, I **highly** recommend disabling it. Take note of the 'Metric' setting too, because if you do choose to work without NAT, you'll need to adjust this later.
+![13.png](/assets/img/posts/routing_peer/13.png)
+You can choose to add the peer individually, or you can choose to use a whole group as routing peers for the network. In this case, any new routing peer just needs to be added to the group. If you're following my setup and intend to disable NATing (explained soon), you'll need to add peers individually.
+![14.png](/assets/img/posts/routing_peer/14.png)
+After this we can configure advanced settings. The main important option here is 'Masquerade'. If you have a simple lab setup that only you use, it's fine to leave this on, however if you're setting up NetBird for a business or a large lab with multiple users, I **highly** recommend disabling it. Take note of the 'Metric' setting too, because if you do choose to work without NAT, you'll need to adjust this later.
 
-Masquerade on a routing peer NATs traffic going into the target network, which means all traffic will appear to be from the routing peer's internal IP address for that network. This presents two main issues:
+Having masquerade enabled on a routing peer NATs traffic going into the target network, which means all traffic will appear to be from the routing peer's internal IP address for that network. This presents two main issues:
 
 - Logging
 - Firewall rules
 
-Internal NAT can be a nightmare for a SOC or incident response team as during an attack, it can be extremely difficult to work out the origin of the traffic coming into the network. It also means we lose fine-grained firewall rules. NetBird peers can be set up to use particular IP addresses, which we can leverage in firewall rule creation within the network if you don't trust ACLs on their own. It also means our rules will be more clear about the actual origin of the traffic, as opposed to specifying the internal IP of the routing peer, it forces us to acknowledge the traffic is from outside the network and treat it as such.
+Internal NAT can be a nightmare for a SOC or incident response team as during an attack, it can be extremely difficult to work out the origin of the traffic coming into the network. It also means we lose fine-grained firewall rules. NetBird peers can be set up to use particular IP addresses, which we can leverage in firewall rule creation within the network if you don't trust ACLs on their own. It also means our rules will be more clear about the actual origin of the traffic, as opposed to specifying the internal IP of the routing peer; it forces us to acknowledge the traffic is from outside the network and treat it as such.
 
 My lab is designed to be shared, so I've disabled NATing. **If you're also planning to turn off masquerade, do not enable the routing peer yet.** We'll need to set up routes in our router first, and enabling the peer now, especially if it has a higher priority than other peers you may already have for the network, will break your connection.
 
@@ -148,10 +148,10 @@ If you are using NATing, congratulations, you're done! I hope you enjoy your new
 
 The first thing you'll need to do to set up routes in OPNSense is set up your routing peer's LAN IP as a gateway. These settings are in 'System > Gateways > Configuration' and this is what the gateway settings look like:
 
-![15.png](/assets/img/posts/routing_peer/15.png)  
+![15.png](/assets/img/posts/routing_peer/15.png)
 This is fairly self-explanatory, just make sure to choose the correct interface. What I did and what I recommend you do if you're making any attempt at HA, is make sure gateway monitoring is on and enable failover states so that traffic can continue through a backup gateway if this one goes down.
 
-This is approximately what the gateway will look like after setup:  
+This is approximately what the gateway will look like after setup:
 ![16.png](/assets/img/posts/routing_peer/16.png)
 
 #### 7.1\. Routes
@@ -160,12 +160,12 @@ Now that we have the gateway set up, we need to define routes. There are two way
 
 #### Option 7.1.1: OPNSense Routes
 
-Routes are accessible in 'System > Routes > Configuration'. Setting one up is pretty simple, just define one using your new gateway like so:  
-![17.png](/assets/img/posts/routing_peer/17.png)  
+Routes are accessible in 'System > Routes > Configuration'. Setting one up is pretty simple, just define one using your new gateway like so:
+![17.png](/assets/img/posts/routing_peer/17.png)
 NetBird runs a network somewhere in the 100.64.0.0/10 range, so if you don't have other networks in this range, you can route any traffic from this range into your routing peer and have it sent to NetBird. If you want to be more specific, NetBird uses a /16 network inside this range. You can find this by checking the NetBird IP of any of your devices. It will look like `100.xxx.yyy.zzz`. To route specifically to this network, your network address should be `100.xxx.0.0/16`.
 
-Save this and make sure it's enabled:  
-![18.png](/assets/img/posts/routing_peer/18.png)  
+Save this and make sure it's enabled:
+![18.png](/assets/img/posts/routing_peer/18.png)
 The tickbox on the left is labelled 'disabled', so having the route checked actually turns it off.
 
 The caveat of this method is that only one gateway is effective for a route at a time. This is fine if you have one routing peer, and can work in theory as with some debugging you can see that which gateway is active and then turn the other one off in NetBird. Unfortunately though, enabling both in OPNSense at the same time still won't result in real HA as when one goes down you'll still have to enable the other in NetBird, and it can be flaky when OPNSense or NetBird start routing things through a different gateway as there doesn't seem to be a guarantee that traffic will start going through the original when it comes back up.
@@ -193,15 +193,15 @@ If you choose to use this for high availability or know more about the gateway s
 
 Theoretically, you could set up gateway group to solve this issue as well, and this is what I did at first. This would allow routing to continue through another gateway if one failed in a more deterministic way than normal routes, but I didn't get a lot of use out of it. I've included an explanation of how these work and how to set them up mostly in case you want to have a go at high availability yourself.
 
-Essentially gateway groups allow you to combine multiple gateways for the same route, choosing which one to use based on a tier. This is technically a more stable version of my hacky findings on generic routes.  
-Gateway groups are available in 'System > Gateways > Group', all we need to do is add a new group and specify our priorities:  
-![19.png](/assets/img/posts/routing_peer/19.png)  
+Essentially gateway groups allow you to combine multiple gateways for the same route, choosing which one to use based on a tier. This is technically a more stable version of my hacky findings on generic routes.
+Gateway groups are available in 'System > Gateways > Group', all we need to do is add a new group and specify our priorities:
+![19.png](/assets/img/posts/routing_peer/19.png)
 Tier 1 is used over Tier 2, and so on. As a lower metric in NetBird corresponds to a higher priority as a routing peer, ensure your Tier 1 gateway has the lowest metric, then increase for each lower tier.
 
 To configure the actual routes, we'll need to use the firewall as OPNSense doesn't allow routing groups to be used in static routing settings.
 
-Head to the firewall settings for the interface that needs to be accessed by the VPN and add a new rule. You'll notice that towards the bottom there's a 'gateway' option:  
-![20.png](/assets/img/posts/routing_peer/20.png)  
+Head to the firewall settings for the interface that needs to be accessed by the VPN and add a new rule. You'll notice that towards the bottom there's a 'gateway' option:
+![20.png](/assets/img/posts/routing_peer/20.png)
 We just need to select our gateway group here and traffic will be routed through it. When choosing the destination, your VPN should be within the 100.64.0.0/10 address space, but you can check your NetBird config for more specific details. Using this method, you can set up firewall rules that route traffic through a specific gateway group and make sure any traffic sent to the VPN range is actually routed through your routing peers.
 
 If you choose this method, good luck! It didn't work out for me but you may have more luck. Just ensure that a lower metric setting in your NetBird routing peers matches a stronger tier in OPNSense (Tier 1 should have the lowest metric). Contact me if you have success with this, I'd be interested to implement it myself and update this post.
@@ -216,14 +216,14 @@ There were a lot of challenges I faced trying to get this working. My OPNSense s
 
 ### Routing Priority Issues
 
-Originally when I started this project I'd thought that NetBird's 'Metric' setting for the routing peer and OPNSense's priority for gateways in a gateway group would be deterministic if the host was known to be online. This was not correct.  
-I had set up my new routing peer with a lower priority in NetBird and OPNSense under the assumption that it would only be used when my main peer was down, but this isn't what happened. Instead, traffic would sometimes go through the backup peer anyway, and come back through the main peer. This would interfere with state tables and lead to broken connections, as each packet could theoretically be routed through a different peer.  
-I'm unfortunately not skilled enough with NetBird internals, OPNSense, or networking in general to know how to fully resolve this issue, but it seems like NetBird and OPNSense would have to communicate in some way, or I need to have the backup peer offline until it detects that the main peer goes down.  
+Originally when I started this project I'd thought that NetBird's metric setting for the routing peer and OPNSense's priority for gateways in a gateway group would be deterministic if the host was known to be online. This was not correct.
+I had set up my new routing peer with a lower priority in NetBird and OPNSense under the assumption that it would only be used when my main peer was down, but this isn't what happened. Instead, traffic would sometimes go through the backup peer anyway, and come back through the main peer. This would interfere with state tables and lead to broken connections, as each packet could theoretically be routed through a different peer.
+I'm unfortunately not skilled enough with NetBird internals, OPNSense, or networking in general to know how to fully resolve this issue, but it seems like NetBird and OPNSense would have to communicate in some way, or I need to have the backup peer offline until it detects that the main peer goes down.
 Eventually I do plan to try find at least somewhat of a workaround like this, but as it stands the important thing is I can still get in to recover from any issues remotely.
 
 ### Routing Peer Subnets
 
-This is another issue caused by me being pretty new to anything more advanced that home networking, but at first I tried to put my routing peers on the same subnet I had most of the devices from before I installed OPNSense. This was a mistake.
+This is another issue caused by me being pretty new to anything more advanced than home networking, but at first I tried to put my routing peers on the same subnet I had most of the devices from before I installed OPNSense. This was a mistake.
 
 For hours, I was struggling to work out why devices in my lab communicating over specifically TCP were receiving traffic but my NetBird peers didn't get any responses back. I eventually discovered the following issue:
 
