@@ -8,12 +8,13 @@ I'm Memphis Marshall, a SOC analyst at [Seamless Intelligence](https://seamlessi
 
 ## Projects
 
+- **[RootRemover](https://github.com/Aurillium/RootRemover)** - a method of using CVE-2026-31431 (CopyFail) to temporarily remove the root password of a host
+- **[Roku ECP2](https://github.com/Aurillium/ECP2)** - a Python library to control Roku TV devices over a network, created by reverse engineering the ECP2 WebSocket protocol
 - **[Invisirun](https://github.com/Aurillium/Invisirun)** - an alternative version of commandline spoofing using `NtCreateUserProcess`
 - **[LunaJuice](https://github.com/Aurillium/LunaJuice)** - a tool worked on during my internship that can connect to suspicious processes and monitor/change their behaviour
 
-Both of these will eventually be written into blog posts for those who are interested.
+Most of these will eventually be written into blog posts for those who are interested.
 
 ## Contact
 
-LinkedIn or directly via email are preferred, you can find these on the bottom-left of the page.
-
+LinkedIn or directly via email are preferred, you can find these on the bottom-left of the page. You can also contact me on Discord **@aurillium**.
